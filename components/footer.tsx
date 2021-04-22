@@ -3,7 +3,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="dark:bg-gray-800 w-full pt-8 pb-4 font-light text-gray-600  dark:text-gray-200 px-4 tracking-wide">
       <hr />
-      <div className=" pt-4 grid grid-cols-3 gap-2 grid-flow-row max-w-lg mx-auto text-sm text-center ">
+      <div className=" pt-4 grid grid-cols-3 gap-4 grid-flow-row max-w-lg mx-auto text-sm text-center ">
         <a>
           <Link href="https://github.com/team-int">깃헙</Link>
         </a>
