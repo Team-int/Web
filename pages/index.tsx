@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <div
         className="hero flex px-2 sm:px-0 text-white"
         style={{
-          backgroundImage: `url(${'/static/images/mountain.jpg'})`,
+          backgroundImage: `url(${'/static/images/mountain.webp'})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
         }}
