@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         <div
           className=" h-3/4 flex px-2 sm:px-0 text-white"
           style={{
-            backgroundImage: `url(${'/images/mountain.jpg'})`,
+            backgroundImage: `url(${'/static/images/mountain.jpg'})`,
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
           }}
@@ -33,7 +33,6 @@ const Home: React.FC = () => {
             </SlideUp>
             <SlideUp show={show[1]}>
               <p className="text-xl md:text-2xl md:pt-2">We live to code.</p>
-              {console.log(show)}
             </SlideUp>
           </div>
         </div>

@@ -3,10 +3,12 @@ import Head from 'next/head'
 const Offline = () => (
   <>
     <Head>
-      <title>next-pwa example</title>
+      <title>옴마야</title>
     </Head>
-    <h1>This is offline fallback page</h1>
-    <h2>When offline, any page route will fallback to this page</h2>
+    <div>
+      <p className="text-4xl">현재 네트워크와 연결되있지 않습니다.</p>
+      <p>이미 캐시되지 않은 정보를 볼려면 네트워크에 연결해주세요.</p>
+    </div>
   </>
 )
 export default Offline

@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <Image alt="logo" src="/images/symbol.png" height={30} width={30} />
+              <Image alt="logo" src="/static/images/symbol.png" height={30} width={30} />
               <div className=" pl-2">
                 <Link href="/">
                   <a className="flex items-center flex-shrink-0 mr-6 text-white">
