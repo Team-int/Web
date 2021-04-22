@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(//fonts.googleapis.com/css?family=Noto+Sans+KR);
+@import url(//fonts.googleapis.com/css?family=Inter);
+@import url(//fonts.googleapis.com/css2?family=Gugi&display=swap);
+
+* {
+  font-family: "Noto Sans KR",Inter, sans-serif !important;
+}
+@import url(//fonts.googleapis.com/css2?family=Gugi&display=swap);
+
+.header {
+    font-family: 'Gugi', cursive;
+}
