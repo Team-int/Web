@@ -8,8 +8,50 @@
 * {
   font-family: "Noto Sans KR",Inter, sans-serif !important;
 }
-@import url(//fonts.googleapis.com/css2?family=Gugi&display=swap);
+.hero{
+  height: 50vh;
+}
+@media (min-width:640px) {
+  .hero{
+    height: 60vh;
+  }
+}
+@media (min-width:768px) {
+  .hero{
+    height: 50vh;
+  }
+}
+@media (min-width:1024px) {
+  .hero{
+    height: 70vh;
+  }
+}
 
-.header {
-    font-family: 'Gugi', cursive;
+
+
+
+.hero-text {
+  margin-top: 30%;
+  margin-left:8px;
+}
+
+
+@media (min-width: 640px) {
+  .hero-text {
+    margin-left:10%;
+    margin-top: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .hero-text {
+    margin-left: 15%;
+    margin-top: 15%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-text {
+    margin-left: 20%;
+    margin-top: 10%;
+  }
 }

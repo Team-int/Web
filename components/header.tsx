@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Header: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Header: React.FC = () => {
                 </Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
-                <Link href="#about">소개</Link>
+                <Link href="/#about">소개</Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
                 <Link href={'https://discord.gg/nKaM6RrN92'}>
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
                 </Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
-                <Link href="/service">서비스</Link>
+                <Link href="/services">서비스</Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
                 <Link href="/help">지원</Link>
@@ -38,7 +39,9 @@ const Header: React.FC = () => {
               </div>
             </div>
 
-            <div className="block items-baseline"></div>
+            <div className="block items-baseline md:hidden">
+              <GiHamburgerMenu className="text-white h-6 w-6" />
+            </div>
           </div>
         </div>
       </nav>

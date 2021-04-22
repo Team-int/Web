@@ -2,36 +2,51 @@ import React, { useEffect, useState } from 'react'
 import SlideUp from '../components/slideUp'
 
 const Home: React.FC = () => {
-  const [show, setShow] = useState<Array<boolean>>([false, false])
+  const [show, setShow] = useState<Array<boolean>>([false, false, false])
   useEffect(() => {
     setTimeout(() => {
-      setShow([true, false])
+      setShow([true, false, false])
       setTimeout(() => {
-        setShow([true, true])
+        setShow([true, true, false])
+        setTimeout(() => {
+          setShow([true, true, true])
+        }, 0.5)
       }, 0.5)
     }, 1)
   }, [])
 
   return (
-    <div className="h-screen">
+    <>
       <div
-        className=" h-3/4 flex px-2 sm:px-0 text-white"
+        className="hero flex px-2 sm:px-0 text-white"
         style={{
           backgroundImage: `url(${'/static/images/mountain.jpg'})`,
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
         }}
       >
-        <div className="m-auto mt-36 max-w-2xl">
+        <div className="mx-2 hero-text">
           <SlideUp show={show[0]}>
-            <div className="text-center text-6xl  lg:text-6xl xl:text-8xl font-bold ">Team int</div>
+            <div className="text-6xl md:text-8xl font-bold ">Team int</div>
           </SlideUp>
           <SlideUp show={show[1]}>
-            <p className="text-xl md:text-2xl md:pt-2">We live to code.</p>
+            <p className="text-xl md:text-2xl md:pt-2 ml-5">We live to code.</p>
           </SlideUp>
+          <div className="mt-5">
+            <SlideUp show={show[2]}>
+              <a className="bg-gray-100 text-black tracking-tighter text-sm px-3 py-2 rounded-md shadow ml-5">
+                더 알아보기
+              </a>
+            </SlideUp>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className={`p-2 mx-auto max-w-4xl pt-10 ${show[2] ? '' : 'hidden'}`}>
+        <p className="text-3xl md:text-6xl tracking-tight font-semibold">팀 인트 소개</p>
+        <p className="ml-5 text-lg md:text-xl">청소년 개발팀 블라블라</p>
+      </div>
+    </>
   )
 }
 export default Home
