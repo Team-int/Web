@@ -1,0 +1,51 @@
+stages:
+  - build-app
+  - build-image
+  - deploy
+
+build app:
+  stage: build-app
+  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:14.16.0-alpine3.10
+  script:
+    - yarn
+    - yarn build
+  cache:
+    paths:
+      - node_modules
+      - .next
+  artifacts:
+    paths:
+      - .next
+    expire_in: 1 day
+    
+build image:
+  stage: build-image
+  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:latest
+  services:
+   -  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:dind
+  script:
+    - docker info
+    - echo $CI_REGISTRY_PASSWORD | docker login --username $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG || docker pull $CI_REGISTRY_IMAGE:main || true
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --cache-from=$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME --cache-from=$CI_REGISTRY_IMAGE:main --shm-size 512M  --build-arg NEXTAUTH_URL="$NEXTAUTH_URL"  --build-arg  GITHUB_ID="$GITHUB_ID"   --build-arg  GITHUB_SECRET="$GITHUB_SECRET" .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+deploy to production:
+  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/alpine:latest
+  stage: deploy
+  tags:
+    - deployment
+  script:
+    - chmod og= $ID_RSA
+    - apk update && apk add openssh-client
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container rm -f team-int-interview || true"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 5000:5000 --restart always --name team-int-interview $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG "
+  environment:
+    name: production
+    url: https://-interview.prod.jcde.xyz
+  only:
+    - main
