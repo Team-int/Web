@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Offline = () => (
+const Offline: React.FC = () => (
   <>
     <Head>
       <title>옴마야</title>

@@ -1,13 +1,14 @@
 import '../styles/global.css'
 import React from 'react'
 import { AppProps } from 'next/app'
-import SEO from '../components/seo'
+import Layout from '../components/layout'
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
-      <SEO />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }
