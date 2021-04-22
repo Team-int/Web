@@ -46,6 +46,6 @@ deploy to production:
     - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 5000:5000 --restart always --name team-int-interview $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG "
   environment:
     name: production
-    url: https://-interview.prod.jcde.xyz
+    url: https://web.prod.jcde.xyz
   only:
     - main
