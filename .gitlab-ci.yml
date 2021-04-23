@@ -21,8 +21,8 @@ test-build app:
 build image:
   stage: build-image
   artifacts:
-  paths:
-    - .next/
+    paths:
+      - .next/
   image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:latest
   services:
    -  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:dind
