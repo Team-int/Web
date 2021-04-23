@@ -1,5 +1,5 @@
 stages:
-  - build-app
+  - test-build-app
   - build-image
   - deploy
 
