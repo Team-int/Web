@@ -3,8 +3,8 @@ stages:
   - build-image
   - deploy
 
-build app:
-  stage: build-app
+test-build app:
+  stage: test-build-app
   image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:14.16.0-alpine3.10
   script:
     - yarn
@@ -20,6 +20,9 @@ build app:
     
 build image:
   stage: build-image
+  artifacts:
+  paths:
+    - .next/
   image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:latest
   services:
    -  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:dind
