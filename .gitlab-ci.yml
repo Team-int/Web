@@ -2,6 +2,11 @@ stages:
   - test-build-app
   - build-image
   - deploy
+  
+variables:
+  # gitlab runner runs git clean and deletes files in .gitignore(including public/sw.js and more), 
+  # so we make git clean ignore files in public
+  GIT_CLEAN_FLAGS: -x -f -e public/** 
 
 test-build app:
   stage: test-build-app
