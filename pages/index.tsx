@@ -5,15 +5,21 @@ import { memberProps } from '../components/membercard'
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
-    profile: '/static/images/members/chul.png',
+    profile: '/static/images/members/chul.webp',
     url: 'https://github.com/chul0721',
     desc: 'Founder, Full stack developer',
   },
   JcdeA: {
     name: 'JcdeA',
-    profile: '/static/images/members/io.png',
+    profile: '/static/images/members/io.webp',
     url: 'https://github.com/JcdeA',
     desc: 'Full stack developer, Designer',
+  },
+  kms: {
+    name: 'ALL PGS',
+    profile: '/static/images/members/kms.webp',
+    url: 'https://github.com/kms0219kms',
+    desc: '안녕하세요. 학생 웹 퍼블리셔 All PGS입니다!',
   },
 }
 
@@ -32,25 +38,28 @@ const Home: React.FC = () => {
 
           <p className="text-xl md:text-3xl  md:pt-2 sm:ml-5">We live to code.</p>
 
-          <div className="mt-5">
-            <a className="bg-white  text-black tracking-tight text-semibold  text-base py-2 px-3 text-semibold rounded-md shadow sm:ml-5">
+          <div className="mt-5 ">
+            <a
+              href="/#about"
+              className="bg-white  text-black tracking-tight text-semibold  text-base py-2 px-3  text-semibold rounded-md shadow sm:ml-5"
+            >
               더 알아보기
             </a>
           </div>
         </div>
       </div>
-      <div className="transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl">
+      <div
+        className="transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
+        id="about"
+      >
         <div className="p-4 mx-auto max-w-5xl pt-12  ">
           <div className=" text-center  text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
           </div>
           <hr className="my-8 mx-2 md:mx-0 md:my-20" />
-          <p className="text-4xl md:text-6xl tracking-tight font-semibold ml-4">팀 소개</p>
 
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-6">
-            <p className="text-center text-3xl font-bold text-gray-800 dark:text-white">
-              Team Members
-            </p>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
+            <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
             <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
               Members of Team int
             </p>

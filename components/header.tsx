@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <Image alt="logo" src="/static/images/symbol.png" height={30} width={30} />
+              <Image alt="logo" src="/static/images/symbol.webp" height={30} width={30} />
               <div className=" pl-2">
                 <Link href="/">
                   <a className="flex items-center flex-shrink-0 mr-6 text-white">
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                 </Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
-                <Link href="/">소개</Link>
+                <Link href="/#about">소개</Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
                 <Link href={'https://discord.gg/nKaM6RrN92'}>
