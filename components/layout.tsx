@@ -9,7 +9,10 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
   return (
     <>
       <SEO />
-      <Header />
+      <div className="z-10">
+        <Header />
+      </div>
+
       <main>{children}</main>
 
       <Footer />

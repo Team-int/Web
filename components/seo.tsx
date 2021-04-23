@@ -1,5 +1,5 @@
 import Head from 'next/head'
-const SEO = () => {
+const SEO: React.FC = () => {
   return (
     <Head>
       <title>Team int</title>

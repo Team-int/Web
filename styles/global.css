@@ -9,7 +9,7 @@
   font-family: "Noto Sans KR",Inter, sans-serif !important;
 }
 .hero{
-  height: 50vh;
+  height: 40vh;
 }
 @media (min-width:640px) {
   .hero{
@@ -18,21 +18,23 @@
 }
 @media (min-width:768px) {
   .hero{
-    height: 50vh;
-  }
-}
-@media (min-width:1024px) {
-  .hero{
     height: 70vh;
   }
 }
+@media (min-width:768px) and (min-height:1024px) {
+  .hero{
+    height: 40vh;
+  }
+}
+
+
 
 
 
 
 .hero-text {
-  margin-top: 30%;
-  margin-left:8px;
+  margin-top: 15%;
+  margin-left:5%;
 }
 
 
@@ -44,14 +46,14 @@
 }
 @media (min-width: 768px) {
   .hero-text {
-    margin-left: 15%;
+    margin-left:8%;
     margin-top: 15%;
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .hero-text {
-    margin-left: 20%;
-    margin-top: 10%;
+    margin-left: 10%;
+    margin-top: 8%;
   }
 }

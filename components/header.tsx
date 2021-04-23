@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 const Header: React.FC = () => {
   return (
     <>
-      <nav className="px-6 py-4 md:py-6 bg-gray-800">
+      <nav className="px-6 py-4 md:py-6 bg-gray-800 z-10 relative w-full h-14 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -14,12 +14,14 @@ const Header: React.FC = () => {
               <div className=" pl-2">
                 <Link href="/">
                   <a className="flex items-center flex-shrink-0 mr-6 text-white">
-                    <span className=" text-2xl font-semibold tracking-tight">Team int</span>
+                    <span className="text-xl md:text-2xl font-semibold tracking-tight">
+                      Team int
+                    </span>
                   </a>
                 </Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
-                <Link href="/#about">소개</Link>
+                <Link href="/">소개</Link>
               </div>
               <div className="hidden md:flex items-center space-x-3 text-lg text-white ml-14">
                 <Link href={'https://discord.gg/nKaM6RrN92'}>
