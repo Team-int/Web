@@ -5,8 +5,9 @@
 stages:
 - test-build-app
 - build-image
-- deploy
 - test
+- deploy
+
 variables:
   GIT_CLEAN_FLAGS: "-x -f -e public/**"
 test-build app:
