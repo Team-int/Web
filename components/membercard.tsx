@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export type memberProps = {
   name: string
   profile: string
@@ -10,7 +11,7 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, url }: memberP
       <div className="flex-col  flex justify-center items-center ">
         <div className="flex-shrink-0">
           <a href={url} className="block relative">
-            <img
+            <Image
               src={profile}
               className="rounded-full border "
               width={60}
