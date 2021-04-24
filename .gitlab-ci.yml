@@ -1,60 +1,71 @@
+# You can override the included template(s) by including variable overrides
+# See https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
 stages:
-  - test-build-app
-  - build-image
-  - deploy
-  
+- test-build-app
+- build-image
+- deploy
+- test
 variables:
-  # gitlab runner runs git clean and deletes files in .gitignore(including public/sw.js and more), 
-  # so we make git clean ignore files in public
-  GIT_CLEAN_FLAGS: -x -f -e public/** 
-
+  GIT_CLEAN_FLAGS: "-x -f -e public/**"
 test-build app:
   stage: test-build-app
-  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:14.16.0-alpine3.10
+  image: "${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:14.16.0-alpine3.10"
   script:
-    - yarn
-    - yarn build
+  - yarn
+  - yarn build
   cache:
     paths:
-      - node_modules
-      - .next
+    - node_modules
+    - ".next"
   artifacts:
     paths:
-      - .next/
+    - ".next/"
     expire_in: 1 day
-    
 build image:
   stage: build-image
   artifacts:
     paths:
-      - .next/
-  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:latest
+    - ".next/"
+  image: "${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:latest"
   services:
-   -  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:dind
+  - "${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:dind"
   script:
-    - docker info
-    - echo $CI_REGISTRY_PASSWORD | docker login --username $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
-    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG || docker pull $CI_REGISTRY_IMAGE:main || true
-    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --cache-from=$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME --cache-from=$CI_REGISTRY_IMAGE:main --shm-size 512M  .
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-    - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-
+  - docker info
+  - echo $CI_REGISTRY_PASSWORD | docker login --username $CI_REGISTRY_USER $CI_REGISTRY
+    --password-stdin
+  - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG || docker pull $CI_REGISTRY_IMAGE:main
+    || true
+  - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --cache-from=$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+    --cache-from=$CI_REGISTRY_IMAGE:main --shm-size 512M  .
+  - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
 deploy to production:
-  image:  ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/alpine:latest
+  image: "${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/alpine:latest"
   stage: deploy
   tags:
-    - deployment
+  - deployment
   script:
-    - chmod og= $ID_RSA
-    - export PROJECT_PATH=$(echo $CI_PROJECT_PATH | tr '/' _)
-    - apk update && apk add openssh-client
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container rm -f $PROJECT_PATH || true"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 3000:5000 --restart always --name $PROJECT_PATH $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG "
+  - chmod og= $ID_RSA
+  - export PROJECT_PATH=$(echo $CI_PROJECT_PATH | tr '/' _)
+  - apk update && apk add openssh-client
+  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login
+    -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull
+    $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container
+    rm -f $PROJECT_PATH || true"
+  - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run
+    -d -p 3000:5000 --restart always --name $PROJECT_PATH $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    "
   environment:
     name: production
     url: https://web.prod.jcde.xyz
   only:
-    - main
+  - main
+sast:
+  stage: test
+include:
+- template: Security/SAST.gitlab-ci.yml
