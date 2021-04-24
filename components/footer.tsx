@@ -14,10 +14,13 @@ const Footer: React.FC = () => {
         © {new Date().getFullYear()} <a href="https://github.com/JcdeA">JcdeA, Chul0721 </a>for Team
         Int, Built with
         <a href="https://nextjs.org"> Next.js </a>
-        <div className="ml-4 dark:text-gray-200 font-light  whitespace-pre-wrap">
+        <div className=" dark:text-gray-200 font-light  whitespace-pre-wrap">
           View source on
           <a href="https://github.com/Team-Int/Team-web"> Github</a>
         </div>
+        <a className="text-xs" href="https://www.vecteezy.com/free-vector/nature">
+          Nature Vectors by Vecteezy
+        </a>
       </div>
     </footer>
   )

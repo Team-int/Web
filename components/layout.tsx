@@ -9,11 +9,11 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
   return (
     <>
       <SEO />
-      <div className="z-10">
+      <div className="z-10 dark:bg-gra transition-colors duration-200">
         <Header />
       </div>
 
-      <main>{children}</main>
+      <main className=" dark:bg-gray-900 transition-colors duration-200">{children}</main>
 
       <Footer />
     </>

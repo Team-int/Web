@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Home: React.FC = () => {
+const Tos: React.FC = () => {
   return (
-    <div className="mx-auto max-w-3xl pt-12">
-      <p className="ml-4 text-6xl font-extrabold tracking-loose pb-6">서비스 이용약관</p>
+    <div className="mx-auto max-w-3xl pt-20 md:pt-12 px-3 dark:bg-gray-900 rounded-xl dark:text-white">
+      <p className="md:ml-4 text-3xl md:text-6xl font-extrabold tracking-loose md:pb-6">
+        서비스 이용약관
+      </p>
       <TosItem
         title="제 1조 (목적)"
         textList={[
@@ -20,7 +22,6 @@ const Home: React.FC = () => {
           '"이용계약"이란 int가 제공하는 서비스에 관한 회원의 이용신청을 int가 승낙함으로써 성립하는 계약을 말합니다.',
         ]}
       />
-      <br />
       <TosItem
         title="제3조 (명시)"
         textList={[
@@ -28,7 +29,6 @@ const Home: React.FC = () => {
           '"int"는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회.배송책임.환불조건 등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공하여 이용자의 확인을 구하여야 합니다.',
         ]}
       />
-      <br />
       <TosItem
         title="제4조(중단)"
         textList={[
@@ -36,29 +36,30 @@ const Home: React.FC = () => {
           '"int"는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 이 때 손해 배상의 내용은 int에서 결정할 수 있으며, 유료 서비스가 아닐 경우 배상이 이루어지지 않을 수 있습니다.',
         ]}
       />
-      <br />
-      <p className="text-4xl font-bold text-center pt-10 line-through">
+      <p className="text-4xl font-bold text-center py-10 line-through">
         짧게 요약하자면 저희는 이상한 짓 안해요
       </p>
     </div>
   )
 }
-export default Home
+export default Tos
 
 const TosItem: React.FC<{ title: string; textList: Array<string> }> = ({ title, textList }) => {
   return (
-    <div className="mt-2">
-      <p className="font-bold text-4xl text-gray-800 pb-1">{title}</p>
+    <div className="mb-2">
+      <p className="font-bold text-xl md:text-4xl dark:text-gray-100 text-gray-800 md:pb-1">
+        {title}
+      </p>
 
-      <ol className="text-gray-700 leading-loose">
+      <div className="text-gray-700 dark:text-gray-200 leading-loose">
         {textList.map((item) => {
           return (
-            <li className="text-md" key={textList.indexOf(item)}>
-              <span className="text-semibold ">{textList.indexOf(item) + 1}</span>. {item}
-            </li>
+            <div className=" text-xs sm:text-sm md:text-lg pt-1" key={textList.indexOf(item)}>
+              <span className="font-medium text-sm">{textList.indexOf(item) + 1}</span>. {item}
+            </div>
           )
         })}
-      </ol>
+      </div>
     </div>
   )
 }

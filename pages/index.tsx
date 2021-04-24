@@ -13,7 +13,7 @@ const members: Record<string, memberProps> = {
     name: 'JcdeA',
     profile: '/static/images/members/io.webp',
     url: 'https://github.com/JcdeA',
-    desc: 'Full stack developer, Designer',
+    desc: 'Full stack developer, Designer, I use arch btw',
   },
   kms: {
     name: 'ALL PGS',
@@ -21,49 +21,55 @@ const members: Record<string, memberProps> = {
     url: 'https://github.com/kms0219kms',
     desc: '안녕하세요. 학생 웹 퍼블리셔 All PGS입니다!',
   },
+  sujang: {
+    name: 'Sujang958',
+    profile: '/static/images/members/sujang.webp',
+    url: 'https://github.com/sujang958',
+    desc: 'Bot list developer, Designer',
+  },
 }
 
 const Home: React.FC = () => {
   return (
     <>
-      <div className=" hero flex sm:px-0 text-white bg-gray-600">
+      <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600">
         <img
           alt="bg"
           src="/static/images/mountain.svg"
           className="absolute hero bg-contain w-full object-cover "
         />
-        <div className="inset-0 mt-14 md:mt-20  hero bg-black opacity-25 absolute z-0"></div>
+        <div className="inset-0 mt-12 md:mt-20 w-full hero bg-black opacity-25 absolute z-0"></div>
         <div className="mx-2 px-4 hero-text z-10 ">
           <div className="text-6xl md:text-9xl font-bold ">Team int</div>
 
-          <p className="text-xl md:text-3xl  md:pt-2 sm:ml-5">We live to code.</p>
+          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5">We live to code.</p>
 
-          <div className="mt-5 ">
+          <div className="mt-3 md:mt-8 ">
             <a
               href="/#about"
-              className="bg-white  text-black tracking-tight text-semibold  text-base py-2 px-3  text-semibold rounded-md shadow sm:ml-5"
+              className="bg-white  text-black  font-bold text-sm md:text-lg py-2 px-3 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
             >
-              더 알아보기
+              about
             </a>
           </div>
         </div>
       </div>
       <div
-        className="transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
+        className="transtition-colors duration-200 dark:bg-gray-900 transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
         id="about"
       >
-        <div className="p-4 mx-auto max-w-5xl pt-12  ">
-          <div className=" text-center  text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
+        <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
+          <span className=" dark:text-white text-black  text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
-          </div>
+          </span>
           <hr className="my-8 mx-2 md:mx-0 md:my-20" />
 
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
+          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-md border border-gray-200 mt-2 md:mt-3">
             <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
             <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
               Members of Team int
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-4">
               {Object.keys(members).map((memberkey) => {
                 const member = members[memberkey]
                 return (
