@@ -11,15 +11,13 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, url }: memberP
       <div className="flex-col  flex justify-center items-center ">
         <div className="flex-shrink-0">
           <a href={url} className="block relative ">
-            <div className="profile border-gray-300 dark:border-gray-500">
-              <Image
-                src={profile}
-                width={70}
-                height={70}
-                alt="profile"
-                className="rounded-full profile"
-              />
-            </div>
+            <Image
+              src={profile}
+              width={70}
+              height={70}
+              alt="profile"
+              className="rounded-full profile bg-white"
+            />
           </a>
         </div>
         <div className="mt-2 text-center flex flex-col">

@@ -41,11 +41,17 @@ const Home: NextPage<{ darkTheme: boolean }> = ({ darkTheme }) => {
     <>
       <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
         <div className="hero-dark">
-          <Image alt="bg" layout="fill" objectFit="cover" src="/static/images/mountain.svg" />
+          <Image
+            priority
+            alt="bg"
+            layout="fill"
+            objectFit="cover"
+            src="/static/images/mountain.svg"
+          />
         </div>
 
         <div className="hero-light">
-          <Image alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
+          <Image priority alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
         </div>
 
         <div
