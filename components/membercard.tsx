@@ -10,11 +10,12 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, url }: memberP
     <div className="p-2 w-50">
       <div className="flex-col  flex justify-center items-center ">
         <div className="flex-shrink-0">
-          <a href={url} className="block relative ">
+          <a href={url} className="block ">
             <Image
               src={profile}
               width={70}
               height={70}
+              layout="fixed"
               alt="profile"
               className="rounded-full profile bg-white"
             />

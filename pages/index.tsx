@@ -36,10 +36,13 @@ const members: Record<string, memberProps> = {
   },
 }
 
-const Home: NextPage<{ darkTheme: boolean }> = ({ darkTheme }) => {
+const Home: NextPage = () => {
   return (
     <>
       <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
+        <div className="hero-light">
+          <Image priority alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
+        </div>
         <div className="hero-dark">
           <Image
             priority
@@ -50,17 +53,7 @@ const Home: NextPage<{ darkTheme: boolean }> = ({ darkTheme }) => {
           />
         </div>
 
-        <div className="hero-light">
-          <Image priority alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
-        </div>
-
-        <div
-          className={
-            'inset-0 mt-14 md:mt-20 w-full hero  absolute z-0 ' + darkTheme
-              ? 'opacity-25'
-              : 'opacity-10'
-          }
-        ></div>
+        <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25 dark:opcacity-10"></div>
         <div className="mx-2 px-4 hero-text z-10 ">
           <div className="text-6xl md:text-9xl font-bold ">Team int</div>
 

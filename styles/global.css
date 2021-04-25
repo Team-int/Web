@@ -156,11 +156,18 @@ li {
   height:70px;
 }
 
+.hero-dark{
+  visibility: hidden;
 
+}
 
+.dark .hero-dark {
+  visibility: visible;
+ 
+}
 
 .hero-light {
-
+ width:max-content;
   -webkit-transition: opacity 200ms ease-in-out;
   -moz-transition: opacity 200ms ease-in-out;
   -o-transition: opacity 200ms ease-in-out;
@@ -168,5 +175,7 @@ li {
 }
 
 .dark .hero-light {
+  height:fit-content;
+  width:fit-content;
   opacity:0;
 }

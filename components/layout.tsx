@@ -1,7 +1,7 @@
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
-import { useState, useEffect, isValidElement, cloneElement, Children } from 'react'
+import { useState, useEffect } from 'react'
 type LayoutProps = {
   children: React.ReactNode
 }
@@ -44,17 +44,7 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
         />
       </div>
 
-      <main className=" dark:bg-gray-900 transition-colors duration-200">
-        {Children.map(children, (child) => {
-          // checking isValidElement is the safe way and avoids a typescript error too
-          if (isValidElement(child)) {
-            return cloneElement(child, { darkTheme: darkTheme })
-          }
-          return child
-        })}
-        {/* 
-        {children} */}
-      </main>
+      <main className=" dark:bg-gray-900 transition-colors duration-200">{children}</main>
 
       <Footer />
     </>
