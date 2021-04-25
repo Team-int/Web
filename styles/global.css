@@ -130,9 +130,43 @@ li {
   transition: width 0.1s ease 0s, left 0.1s ease 0s;
   width: 0;
 }
+.dark .underline:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #FFF1;
+  transition: width 0.1s ease 0s, left 0.1s ease 0s;
+  width: 0;
+}
 .underline:hover:after { 
   width: 100%; 
   left: 0; 
 }
 
 
+
+.profile {
+  border-radius:9999px;
+  border-width:1px;
+  width: 70px;
+  height:70px;
+}
+
+
+
+
+.hero-light {
+
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.dark .hero-light {
+  opacity:0;
+}

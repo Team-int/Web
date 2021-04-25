@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tos: React.FC = () => {
   return (
-    <div className="mx-auto max-w-3xl pt-20 md:pt-12 px-3 dark:bg-gray-900 rounded-xl dark:text-white">
+    <div className="mx-auto max-w-3xl pt-20 md:pt-12 px-3 transition-all duration-200 dark:text-white">
       <p className="md:ml-4 text-3xl md:text-6xl font-extrabold tracking-loose md:pb-6">
         서비스 이용약관
       </p>

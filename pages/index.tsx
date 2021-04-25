@@ -1,7 +1,8 @@
 import React from 'react'
-import MemberCard from '../components/membercard'
-import { memberProps } from '../components/membercard'
-
+import MemberCard from 'components/membercard'
+import { memberProps } from 'components/membercard'
+import { NextPage } from 'next'
+import Image from 'next/image'
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
@@ -27,18 +28,33 @@ const members: Record<string, memberProps> = {
     url: 'https://github.com/sujang958',
     desc: 'Bot list developer, Designer',
   },
+  agg: {
+    name: 'makeGOD',
+    profile: '/static/images/members/agg.webp',
+    url: 'https://github.com/makeGOD',
+    desc: 'IntBot developer, MadeGOD.',
+  },
 }
 
-const Home: React.FC = () => {
+const Home: NextPage<{ darkTheme: boolean }> = ({ darkTheme }) => {
   return (
     <>
-      <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600">
-        <img
-          alt="bg"
-          src="/static/images/mountain.svg"
-          className="absolute hero bg-contain w-full object-cover "
-        />
-        <div className="inset-0 mt-12 md:mt-20 w-full hero bg-black opacity-25 absolute z-0"></div>
+      <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
+        <div className="hero-dark">
+          <Image alt="bg" layout="fill" objectFit="cover" src="/static/images/mountain.svg" />
+        </div>
+
+        <div className="hero-light">
+          <Image alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
+        </div>
+
+        <div
+          className={
+            'inset-0 mt-14 md:mt-20 w-full hero  absolute z-0 ' + darkTheme
+              ? 'opacity-25'
+              : 'opacity-10'
+          }
+        ></div>
         <div className="mx-2 px-4 hero-text z-10 ">
           <div className="text-6xl md:text-9xl font-bold ">Team int</div>
 
@@ -55,7 +71,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div
-        className="transtition-colors duration-200 dark:bg-gray-900 transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
+        className="transtition-colors duration-200 dark:bg-gray-800 transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
