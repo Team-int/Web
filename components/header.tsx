@@ -135,7 +135,7 @@ const Header: FC = () => {
   )
 }
 
-const MobileMenuButton: FC<{ url: string; text: string; setShowMenu: () => void }> = ({
+const MobileMenuButton: FC<{ url: string; text: string; setShowMenu: Dispatch<SetStateAction<boolean>>}> = ({
   url,
   text,
   setShowMenu,
