@@ -70,7 +70,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div
-        className="transtition-colors duration-200 dark:bg-gray-800 transform -translate-y-10 bg-white mx-auto  rounded-lg md:rounded-3xl "
+        className="transtition-colors duration-200 dark:bg-gray-800 transform  bg-white mx-auto  "
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">

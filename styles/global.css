@@ -157,17 +157,17 @@ li {
 }
 
 .hero-light{
-  visibility: visible;
+  opacity: 100;
 
 }
 
 .dark .hero-light {
-  visibility: hidden;
+  opacity: 0;
  
 }
 
 .dark .hero-dark {
-visibility: visible;
+  opacity: 100;
   -webkit-transition: opacity 200ms ease-in-out;
   -moz-transition: opacity 200ms ease-in-out;
   -o-transition: opacity 200ms ease-in-out;
@@ -175,5 +175,5 @@ visibility: visible;
 }
 
 .hero-dark {
-  visibility: hidden;
+  opacity: 0;
 }
