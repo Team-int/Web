@@ -156,26 +156,24 @@ li {
   height:70px;
 }
 
-.hero-dark{
-  visibility: hidden;
+.hero-light{
+  visibility: visible;
 
 }
 
-.dark .hero-dark {
-  visibility: visible;
+.dark .hero-light {
+  visibility: hidden;
  
 }
 
-.hero-light {
- width:max-content;
+.dark .hero-dark {
+visibility: visible;
   -webkit-transition: opacity 200ms ease-in-out;
   -moz-transition: opacity 200ms ease-in-out;
   -o-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
 }
 
-.dark .hero-light {
-  height:fit-content;
-  width:fit-content;
-  opacity:0;
+.hero-dark {
+  visibility: hidden;
 }
