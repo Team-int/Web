@@ -39,19 +39,9 @@ const members: Record<string, memberProps> = {
 const Home: NextPage = () => {
   return (
     <>
-      <div className="w-full transition-all hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
-        <div className="hero-light">
-          <Image priority alt="bg" layout="fill" objectFit="cover" src="/static/images/light.svg" />
-        </div>
-        <div className="hero-dark">
-          <Image
-            priority
-            alt="bg"
-            layout="fill"
-            objectFit="cover"
-            src="/static/images/mountain.svg"
-          />
-        </div>
+      <div className="w-full transition-all z-0 hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
+          <img alt="bg"  className="hero-light bg-contain absolute hero w-full object-cover" src="/static/images/light.svg" />
+          <img alt="bg" className="hero-dark bg-contain absolute hero w-full object-cover" src="/static/images/mountain.svg"/>
 
         <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25 dark:opcacity-10"></div>
         <div className="mx-2 px-4 hero-text z-10 ">

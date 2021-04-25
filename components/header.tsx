@@ -54,7 +54,7 @@ const Header: React.FC<{
 }> = ({ darkTheme, toggleDarkMode, showMenu, setShowMenu }) => {
   return (
     <>
-      <nav className="transition-colors duration-200 px-4 md:px-6 py-4 md:py-6 bg-white text-black dark:bg-gray-800 z-20 relative w-full h-14 md:h-20">
+      <nav className="transition-colors duration 200 px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-20 relative w-full h-16 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -88,7 +88,7 @@ const Header: React.FC<{
                 <DarkToggle darkTheme={darkTheme} toggleDarkMode={toggleDarkMode} />
                 <GiHamburgerMenu
                   onClick={() => (showMenu ? setShowMenu(false) : setShowMenu(true))}
-                  className="text-white ml-2 sm:ml-4 h-6 w-6 block md:hidden"
+                  className="text-black dark:text-white ml-2 sm:ml-4 h-6 w-6 block md:hidden"
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const Header: React.FC<{
           leaveTo=" -translate-y-20"
         >
           <div className="md:invisible md:h-0 ">
-            <div className="px-4 h-18  pt-2 pb-3 space-y-1 sm:px-3 bg-gray-700 shadow text-white hover:text-gray-300 dark:hover:text-white block  py-4 text-base font-medium">
+            <div className="px-4 h-20  pt-2 pb-3 space-y-1 sm:px-3 bg-gray-700 shadow text-white hover:text-gray-300 dark:hover:text-white block  py-4 text-base font-medium">
               <Link href="/">Home</Link>
             </div>
           </div>

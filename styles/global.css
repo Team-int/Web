@@ -161,19 +161,16 @@ li {
 
 }
 
-.dark .hero-light {
-  opacity: 0;
- 
-}
 
 .dark .hero-dark {
   opacity: 100;
-  -webkit-transition: opacity 200ms ease-in-out;
-  -moz-transition: opacity 200ms ease-in-out;
-  -o-transition: opacity 200ms ease-in-out;
-  transition: opacity 200ms ease-in-out;
 }
 
 .hero-dark {
   opacity: 0;
+
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
