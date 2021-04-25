@@ -2,7 +2,6 @@ import React from 'react'
 import MemberCard from 'components/membercard'
 import { memberProps } from 'components/membercard'
 import { NextPage } from 'next'
-import Image from 'next/image'
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
@@ -40,10 +39,18 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="w-full transition-all z-0 hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
-          <img alt="bg"  className="hero-light bg-contain absolute hero w-full object-cover" src="/static/images/light.svg" />
-          <img alt="bg" className="hero-dark bg-contain absolute hero w-full object-cover" src="/static/images/mountain.svg"/>
+        <img
+          alt="bg"
+          className="hero-light bg-contain absolute hero w-full object-cover"
+          src="/static/images/light.svg"
+        />
+        <img
+          alt="bg"
+          className="hero-dark bg-contain absolute hero w-full object-cover"
+          src="/static/images/mountain.svg"
+        />
 
-        <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25 dark:opcacity-10"></div>
+        <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25"></div>
         <div className="mx-2 px-4 hero-text z-10 ">
           <div className="text-6xl md:text-9xl font-bold ">Team int</div>
 

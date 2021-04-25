@@ -1,12 +1,12 @@
-import React from 'react'
+import { FC, useState, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-const DarkToggle: React.FC<{ darkTheme: boolean; toggleDarkMode: () => void }> = ({
-  darkTheme,
+const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
   toggleDarkMode,
+  darkTheme,
 }) => {
   return (
     <label className="cursor-pointer flex items-center justify-between">
@@ -46,12 +46,32 @@ const DarkToggle: React.FC<{ darkTheme: boolean; toggleDarkMode: () => void }> =
   )
 }
 
-const Header: React.FC<{
-  darkTheme: boolean
-  toggleDarkMode: () => void
-  showMenu: boolean
-  setShowMenu: (a) => void
-}> = ({ darkTheme, toggleDarkMode, showMenu, setShowMenu }) => {
+const Header: FC = () => {
+  const [showMenu, setShowMenu] = useState(false)
+  const [darkTheme, setDarkTheme] = useState(false)
+
+  const toggleDarkMode = (): void => {
+    // Whenever the user explicitly chooses light mode
+    if (darkTheme) {
+      localStorage.theme = 'light'
+      document.querySelector('html').classList.remove('dark')
+      setDarkTheme(false)
+    } else {
+      localStorage.theme = 'dark'
+      document.querySelector('html').classList.add('dark')
+      setDarkTheme(true)
+    }
+  }
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      localStorage.theme = 'dark'
+      document.querySelector('html').classList.add('dark')
+      setDarkTheme(true)
+    }
+  }, [])
   return (
     <>
       <nav className="transition-colors duration 200 px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-20 relative w-full h-16 md:h-20">
@@ -99,20 +119,39 @@ const Header: React.FC<{
         <Transition
           show={showMenu}
           enter="transform transition ease-in-out duration-200 z-0"
-          enterFrom=" -translate-y-20"
+          enterFrom=" -translate-y-24"
           enterTo="translate-y-0"
           leave="transform transition ease-in-out duration-200 z-0"
           leaveFrom=" translate-y-0"
-          leaveTo=" -translate-y-20"
+          leaveTo=" -translate-y-24"
         >
-          <div className="md:invisible md:h-0 ">
-            <div className="px-4 h-20  pt-2 pb-3 space-y-1 sm:px-3 bg-gray-700 shadow text-white hover:text-gray-300 dark:hover:text-white block  py-4 text-base font-medium">
-              <Link href="/">Home</Link>
-            </div>
+          <div className="md:invisible md:h-0 font-medium text-white hover:text-gray-300 dark:hover:text-white ">
+            <MobileMenuButton url="/#about" text="About" setShowMenu={setShowMenu} />
+            <MobileMenuButton url="/tos" text="Terms Of Service" setShowMenu={setShowMenu} />
           </div>
         </Transition>
       </div>
     </>
+  )
+}
+
+const MobileMenuButton: FC<{ url: string; text: string; setShowMenu: () => void }> = ({
+  url,
+  text,
+  setShowMenu,
+}) => {
+  return (
+    <div className="px-4 h-12 space-y-1 sm:px-3 bg-gray-700  block  py-2 ">
+      <Link href={url}>
+        <button
+          onClick={() => {
+            setTimeout(() => setShowMenu(false), 0.5)
+          }}
+        >
+          {text}
+        </button>
+      </Link>
+    </div>
   )
 }
 
