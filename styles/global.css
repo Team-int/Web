@@ -9,7 +9,7 @@
   font-family: "Noto Sans KR",Inter, sans-serif !important;
 }
 .hero{
-  height: 40vh;
+  height: 45vh;
 }
 .hero-text {
   margin-top: 10%;
@@ -157,13 +157,13 @@ li {
 }
 
 .hero-light{
-  opacity: 100;
+  opacity: 1;
 
 }
 
 
 .dark .hero-dark {
-  opacity: 100;
+  opacity: 1;
 }
 
 .hero-dark {
@@ -174,3 +174,18 @@ li {
   -o-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
 }
+
+
+.nav {
+  opacity: 0;
+
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  -o-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+.nav.show{
+  opacity: 0.5;
+}
+
+

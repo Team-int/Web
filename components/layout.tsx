@@ -13,7 +13,9 @@ const Layout: React.FC = ({ children }: LayoutProps) => {
         <Header />
       </div>
 
-      <main className=" dark:bg-gray-900 transition-colors duration-200">{children}</main>
+      <main className="pt-14 md:pt-20 dark:bg-gray-900 transition-colors duration-200">
+        {children}
+      </main>
 
       <Footer />
     </>

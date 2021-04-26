@@ -1,5 +1,4 @@
 import { FC, useState, useEffect } from 'react'
-import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -74,7 +73,13 @@ const Header: FC = () => {
   }, [])
   return (
     <>
-      <nav className="transition-colors duration 200 px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-20 relative w-full h-16 md:h-20">
+      <button
+        onClick={() => setShowMenu(false)}
+        className={`fixed inset-0 nav h-screen w-screen z-20  block transition-opacity bg-black opacity-50 md:hidden ${
+          showMenu ? 'show' : ''
+        }`}
+      />
+      <nav className="   shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-40 w-full h-16 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -115,21 +120,23 @@ const Header: FC = () => {
           </div>
         </div>
       </nav>
-      <div className="absolute z-10 w-full">
-        <Transition
-          show={showMenu}
-          enter="transform transition ease-in-out duration-200 z-0"
-          enterFrom=" -translate-y-24"
-          enterTo="translate-y-0"
-          leave="transform transition ease-in-out duration-200 z-0"
-          leaveFrom=" translate-y-0"
-          leaveTo=" -translate-y-24"
-        >
-          <div className="md:invisible md:h-0 font-medium text-white hover:text-gray-300 dark:hover:text-white ">
-            <MobileMenuButton url="/#about" text="About" setShowMenu={setShowMenu} />
-            <MobileMenuButton url="/tos" text="Terms Of Service" setShowMenu={setShowMenu} />
-          </div>
-        </Transition>
+
+      <div
+        className={`fixed inset-y-0 right-0 z-30 w-6/12 md:hidden shadow-2xl overflow-y-auto transition duration-200 ease-out transform translate-x-0 dark:bg-gray-700 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${
+          showMenu ? 'shadow-2xl ease-out translate-x-0' : 'shadow-none ease-in translate-x-full'
+        }`}
+      >
+        <div className="md:invisible pt-20 h-3/4  md:h-0 font-medium text-white hover:text-gray-300 dark:hover:text-white ">
+          <MobileMenuButton url="/#about" text="소개" setShowMenu={setShowMenu} />
+          <MobileMenuButton
+            url="https://discord.com/invite/nKaM6RrN92"
+            text="커뮤니티"
+            setShowMenu={setShowMenu}
+          />
+          <MobileMenuButton url="/tos" text="서비스" setShowMenu={setShowMenu} />
+          <MobileMenuButton url="/help" text="지원" setShowMenu={setShowMenu} />
+          <MobileMenuButton url="/tos" text="약관" setShowMenu={setShowMenu} />
+        </div>
       </div>
     </>
   )
@@ -141,7 +148,7 @@ const MobileMenuButton: FC<{ url: string; text: string; setShowMenu: (a: boolean
   setShowMenu,
 }) => {
   return (
-    <div className="px-4 h-12 space-y-1 sm:px-3 bg-gray-700  block  py-2 ">
+    <div className="px-4 h-12 space-y-1 sm:px-3 bg-white text-black dark:text-white dark:bg-gray-700  block  py-2 ">
       <Link href={url}>
         <button
           onClick={() => {

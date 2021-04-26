@@ -38,14 +38,14 @@ const members: Record<string, memberProps> = {
 const Home: NextPage = () => {
   return (
     <>
-      <div className="w-full transition-all z-0 hero flex sm:px-0 duration-200 text-white bg-gray-600 relative">
+      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 text-white bg-gray-800">
         <img
-          alt="bg"
-          className="hero-light bg-contain absolute hero w-full object-cover"
+          alt=""
+          className="hero-light absolute hero w-full bg-contain object-cover"
           src="/static/images/light.svg"
         />
         <img
-          alt="bg"
+          alt=""
           className="hero-dark bg-contain absolute hero w-full object-cover"
           src="/static/images/mountain.svg"
         />
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div
-        className="transtition-colors duration-200 dark:bg-gray-800 transform  bg-white mx-auto  "
+        className="transtition-colors duration-200 dark:bg-gray-800 transform  bg-white mx-auto rounded-2xl -translate-y-16 "
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
