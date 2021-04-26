@@ -6,10 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-      "lint": "eslint --fix ."
+    "lint": "eslint --fix ."
   },
   "dependencies": {
-    "@headlessui/react": "^1.0.0",
     "@tailwindcss/typography": "^0.4.0",
     "next": "10.1.3",
     "next-pwa": "^5.2.14",
