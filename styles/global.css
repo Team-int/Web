@@ -8,6 +8,9 @@
 * {
   font-family: "Noto Sans KR",Inter, sans-serif !important;
 }
+html {
+  scroll-behavior: smooth;
+  }
 .hero{
   height: 45vh;
 }
