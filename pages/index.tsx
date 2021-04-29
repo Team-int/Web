@@ -97,6 +97,9 @@ const Home: NextPage = () => {
               })}
             </div>
           </div>
+          <div className="pt-10 ">
+            <p className="text-4xl font-semibold">프로젝트 소개</p>
+          </div>
         </div>
       </div>
     </>
