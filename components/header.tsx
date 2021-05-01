@@ -122,7 +122,7 @@ const Header: FC = () => {
       </nav>
 
       <div
-        className={`fixed inset-y-0 right-0 z-30 w-6/12 md:hidden shadow-2xl overflow-y-auto transition duration-200 ease-out transform translate-x-0 dark:bg-gray-700 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${
+        className={`fixed inset-y-0 right-0 z-30 mobile-nav md:hidden shadow-2xl overflow-y-auto transition duration-200 ease-out transform translate-x-0 dark:bg-gray-700 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${
           showMenu ? 'shadow-2xl ease-out translate-x-0' : 'shadow-none ease-in translate-x-full'
         }`}
       >

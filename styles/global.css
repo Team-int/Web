@@ -5,6 +5,10 @@
 @import url(//fonts.googleapis.com/css?family=Inter);
 @import url(//fonts.googleapis.com/css2?family=Gugi&display=swap);
 
+.herobg {
+  background-color: #ed5d45
+}
+
 * {
   font-family: "Noto Sans KR",Inter, sans-serif !important;
 }
@@ -93,7 +97,7 @@ html {
   }
   .hero-text {
     margin-left: 5%;
-    margin-top: 10%;
+    margin-top: 8%;
   }
   
 }
@@ -189,6 +193,17 @@ li {
 }
 .nav.show{
   opacity: 0.5;
+  
+}
+
+.mobile-nav {
+  width:45%;
+}
+
+@media (min-width:640px) {
+  .mobile-nav{
+    width:30%;
+  }
 }
 
 

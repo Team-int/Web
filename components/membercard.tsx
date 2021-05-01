@@ -7,7 +7,7 @@ export type memberProps = {
 }
 const MemberCard: React.FC<memberProps> = ({ name, profile, desc, url }: memberProps) => {
   return (
-    <div className="p-2 w-50">
+    <div className="p-2 ">
       <div className="flex-col  flex justify-center items-center ">
         <div className="flex-shrink-0">
           <a href={url} className="block ">
@@ -22,10 +22,12 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, url }: memberP
           </a>
         </div>
         <div className="mt-2 text-center flex flex-col">
-          <a href={url} className="text-gray-600 dark:text-white text-xl">
+          <a href={url} className="text-gray-700 text-xl dark:text-white md:text-2xl">
             {name}
           </a>
-          <span className="text-gray-500 text-sm dark:text-gray-300 font-light">{desc}</span>
+          <span className="text-gray-600 text-sm md:text-md tracking-tight  dark:text-gray-300 font-light">
+            {desc}
+          </span>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import MemberCard from 'components/membercard'
 import { memberProps } from 'components/membercard'
 import { NextPage } from 'next'
+import ProjectCard from 'components/projectcard'
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
@@ -31,14 +32,14 @@ const members: Record<string, memberProps> = {
     name: 'makeGOD',
     profile: '/static/images/members/agg.webp',
     url: 'https://github.com/makeGOD',
-    desc: 'IntBot developer, MadeGOD.',
+    desc: 'Intbot developer, MakeGOD.',
   },
 }
 
 const Home: NextPage = () => {
   return (
     <>
-      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 text-white bg-gray-800">
+      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 hero-bg">
         <img
           alt=""
           className="hero-light absolute hero w-full bg-contain object-cover"
@@ -52,14 +53,14 @@ const Home: NextPage = () => {
 
         <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25"></div>
         <div className="mx-2 px-4 hero-text z-10 ">
-          <div className="text-6xl md:text-9xl font-bold ">Team int</div>
+          <div className="text-6xl md:text-9xl font-bold text-white ">Team int</div>
 
-          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5">We live to code.</p>
+          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-white">We live to code.</p>
 
           <div className="mt-3 md:mt-8 ">
             <a
               href="/#about"
-              className="bg-white  text-black  font-bold text-sm md:text-lg py-2 px-3 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
+              className="bg-white text-gray-800 font-semibold text-sm md:text-lg py-2 px-3 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
             >
               about
             </a>
@@ -71,13 +72,12 @@ const Home: NextPage = () => {
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
-          <span className=" dark:text-white text-black  text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
+          <span className="   text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
           </span>
           <hr className="my-8 mx-2 md:mx-0 md:my-20" />
-
-          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-md border border-gray-200 mt-2 md:mt-3">
-            <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
+          <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
+          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
             <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
               Members of Team int
             </p>
@@ -97,8 +97,16 @@ const Home: NextPage = () => {
               })}
             </div>
           </div>
-          <div className="pt-10 ">
+          <div className="rounded-xl p-4 pt-20">
             <p className="text-4xl font-semibold">프로젝트 소개</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gaps-4 pt-5">
+              <ProjectCard
+                url="example.com"
+                name="intbot"
+                image="/static/images/projects/intbot.webp"
+                desc="helo"
+              />
+            </div>
           </div>
         </div>
       </div>
