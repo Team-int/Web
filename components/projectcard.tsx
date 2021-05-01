@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ name, image, desc, url }: Project
               height={100}
               layout="fixed"
               alt="profile"
-              className=" bg-white"
+              className=" bg-white rounded-lg"
             />
           </a>
         </div>

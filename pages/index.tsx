@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div
-        className="transtition-colors duration-200 dark:bg-gray-800 transform  bg-white mx-auto rounded-2xl -translate-y-16 "
+        className="transtition-colors duration-200 dark:bg-primary   bg-white mx-auto rounded-2xl  "
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           </span>
           <hr className="my-8 mx-2 md:mx-0 md:my-20" />
           <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
-          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-gray-800 rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
+          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-foreground rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
             <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
               Members of Team int
             </p>

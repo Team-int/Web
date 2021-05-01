@@ -1,7 +1,7 @@
 import Link from 'next/link'
 const Footer: React.FC = () => {
   return (
-    <footer className="dark:bg-gray-900 w-full pt-8 pb-4 font-light text-gray-600  dark:text-gray-200 px-8 tracking-wide">
+    <footer className="dark:bg-primary w-full pt-8 pb-4 font-light text-gray-600  dark:text-gray-200 px-8 tracking-wide">
       <hr />
       <div className=" pt-4 grid grid-cols-3 gap-4 grid-flow-row max-w-lg mx-auto text-sm text-center pb-5">
         <Link href="https://github.com/team-int">깃허브</Link>

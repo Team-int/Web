@@ -145,7 +145,7 @@ li {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #FFF1;
+  background: #FFF;
   transition: width 0.1s ease 0s, left 0.1s ease 0s;
   width: 0;
 }
