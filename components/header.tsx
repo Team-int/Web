@@ -75,8 +75,8 @@ const Header: FC = () => {
     <>
       <button
         onClick={() => setShowMenu(false)}
-        className={`fixed inset-0 nav h-screen w-screen z-20  block transition-opacity bg-black opacity-50 md:hidden ${
-          showMenu ? 'show' : ''
+        className={`fixed inset-0 nav h-screen w-screen   block transition-opacity bg-black opacity-50 md:hidden ${
+          showMenu ? 'show z-20' : 'z-0'
         }`}
       />
       <nav className="   shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-40 w-full h-16 md:h-20">
