@@ -75,11 +75,12 @@ const Header: FC = () => {
     <>
       <button
         onClick={() => setShowMenu(false)}
-        name="overlay"
-        className={`fixed inset-0 nav h-screen w-screen  block bg-black opacity-50 md:hidden ${
+        className={`fixed inset-0 nav h-screen w-screen text-transparent  block bg-black opacity-50 md:hidden ${
           showMenu ? 'show z-30' : 'z-0'
         }`}
-      />
+      >
+        overlay {/*<- accessability  */}
+      </button>
       <nav className="  shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-50 w-full h-16 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
