@@ -75,11 +75,11 @@ const Header: FC = () => {
     <>
       <button
         onClick={() => setShowMenu(false)}
-        className={`fixed inset-0 nav h-screen w-screen   block transition-opacity bg-black opacity-50 md:hidden ${
-          showMenu ? 'show z-20' : 'z-0'
+        className={`fixed inset-0 nav h-screen w-screen  block transition-opacity bg-black opacity-50 md:hidden ${
+          showMenu ? 'show z-30' : 'z-0'
         }`}
       />
-      <nav className="   shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-40 w-full h-16 md:h-20">
+      <nav className="  shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-50 w-full h-16 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -122,7 +122,7 @@ const Header: FC = () => {
       </nav>
 
       <div
-        className={`fixed inset-y-0 right-0 z-30 mobile-nav md:hidden shadow-2xl overflow-y-auto transition duration-200 ease-out transform translate-x-0 dark:bg-gray-700 bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${
+        className={`fixed inset-y-0 right-0 z-40 mobile-nav md:hidden shadow-2xl overflow-y-auto transition duration-200 ease-out transform translate-x-0 dark:bg-foreground bg-white border-r-2 lg:translate-x-0 lg:static lg:inset-0 ${
           showMenu ? 'shadow-2xl ease-out translate-x-0' : 'shadow-none ease-in translate-x-full'
         }`}
       >
@@ -148,7 +148,7 @@ const MobileMenuButton: FC<{ url: string; text: string; setShowMenu: (a: boolean
   setShowMenu,
 }) => {
   return (
-    <div className="px-4 h-12 space-y-1 sm:px-3 bg-white text-black dark:text-white dark:bg-gray-700  block  py-2 ">
+    <div className="px-4 h-12 space-y-1 sm:px-3 bg-white text-black dark:text-white dark:bg-foreground  block  py-2 ">
       <Link href={url}>
         <button
           onClick={() => {

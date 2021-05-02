@@ -7,31 +7,31 @@ const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
     profile: '/static/images/members/chul.webp',
-    url: 'https://github.com/chul0721',
+    github: 'https://github.com/chul0721',
     desc: 'Founder, Full stack developer',
   },
   JcdeA: {
     name: 'JcdeA',
     profile: '/static/images/members/io.webp',
-    url: 'https://github.com/JcdeA',
+    github: 'https://github.com/JcdeA',
     desc: 'Full stack developer, Designer, I use arch btw',
   },
   kms: {
     name: 'ALL PGS',
     profile: '/static/images/members/kms.webp',
-    url: 'https://github.com/kms0219kms',
+    github: 'https://github.com/kms0219kms',
     desc: '안녕하세요. 학생 웹 퍼블리셔 All PGS입니다!',
   },
   sujang: {
     name: 'Sujang958',
     profile: '/static/images/members/sujang.webp',
-    url: 'https://github.com/sujang958',
+    github: 'https://github.com/sujang958',
     desc: 'Bot list developer, Designer',
   },
   agg: {
     name: 'makeGOD',
     profile: '/static/images/members/agg.webp',
-    url: 'https://github.com/makeGOD',
+    github: 'https://github.com/makeGOD',
     desc: 'Intbot developer, MakeGOD.',
   },
 }
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div
-        className="transtition-colors duration-200 dark:bg-primary   bg-white mx-auto rounded-2xl  "
+        className="transtition-colors duration-200 z-60 relative mx-auto rounded-2xl  "
         id="about"
       >
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
@@ -77,34 +77,41 @@ const Home: NextPage = () => {
           </span>
           <hr className="my-8 mx-2 md:mx-0 md:my-20" />
           <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
-          <div className=" transtition-colors duration-200 p-6 bg-white dark:bg-foreground rounded-xl  shadow-lg border border-gray-200 mt-2 md:mt-3">
-            <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
-              Members of Team int
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-4">
-              {Object.keys(members).map((memberkey) => {
-                const member = members[memberkey]
-                return (
-                  <div key={memberkey}>
-                    <MemberCard
-                      url={member.url}
-                      name={member.name}
-                      profile={member.profile}
-                      desc={member.desc}
-                    />
-                  </div>
-                )
-              })}
-            </div>
+
+          <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
+            Members of Team int
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4">
+            {Object.keys(members).map((memberkey) => {
+              const member = members[memberkey]
+              return (
+                <>
+                  <MemberCard
+                    github={member.github}
+                    name={member.name}
+                    profile={member.profile}
+                    desc={member.desc}
+                  />
+                </>
+              )
+            })}
           </div>
+
           <div className="rounded-xl p-4 pt-20">
             <p className="text-4xl font-semibold">프로젝트 소개</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gaps-4 pt-5">
               <ProjectCard
-                url="example.com"
+                url="https://github.com/Team-int/intbot"
                 name="intbot"
                 image="/static/images/projects/intbot.webp"
-                desc="helo"
+                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
+                도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
+              />
+              <ProjectCard
+                url="https://lab.jcde.xyz/Team-int/Web"
+                name="Web"
+                image="/static/images/projects/intbot.webp"
+                desc="지금 보고 있는 웹사이트입니다!"
               />
             </div>
           </div>

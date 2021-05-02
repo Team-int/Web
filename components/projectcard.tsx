@@ -7,7 +7,7 @@ export type ProjectProps = {
 }
 const ProjectCard: React.FC<ProjectProps> = ({ name, image, desc, url }: ProjectProps) => {
   return (
-    <div className="p-2 mx-2 h-72  rounded-xl shadow-lg transition hover:-translate-y-1 duration-200 transform border border-gray-100 hover:shadow-2xl pt-4">
+    <div className="p-2 max-w-sm m-2 h-80  rounded-xl shadow-lg transition hover:-translate-y-1 duration-200 transform border border-gray-100 hover:shadow-2xl pt-4">
       <div className="flex-col flex justify-center items-center  ">
         <div className="flex-shrink-0">
           <a href={url} className="block ">
@@ -25,7 +25,9 @@ const ProjectCard: React.FC<ProjectProps> = ({ name, image, desc, url }: Project
           <a href={url} className="text-gray-700 dark:text-white text-2xl capitalize">
             {name}
           </a>
-          <span className="text-gray-600 text-md dark:text-gray-300 font-light">{desc}</span>
+          <span className="text-gray-600 text-md dark:text-gray-300 font-light p-4 break-normal">
+            {desc}
+          </span>
         </div>
       </div>
     </div>
