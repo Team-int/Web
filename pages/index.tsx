@@ -82,14 +82,14 @@ const Home: NextPage = () => {
             {Object.keys(members).map((memberkey) => {
               const member = members[memberkey]
               return (
-                <>
+                <div key={member.name}>
                   <MemberCard
                     github={member.github}
                     name={member.name}
                     profile={member.profile}
                     desc={member.desc}
                   />
-                </>
+                </div>
               )
             })}
           </div>

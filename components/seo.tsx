@@ -2,6 +2,11 @@ import Head from 'next/head'
 const SEO: React.FC = () => {
   return (
     <Head>
+      <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" />
+      <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      />
       <link rel="preload" as="image" href="/static/images/light.svg" />
       <link rel="preload" as="image" href="/static/images/mountain.svg" />
       <title>Team int</title>
