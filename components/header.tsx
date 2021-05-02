@@ -75,7 +75,8 @@ const Header: FC = () => {
     <>
       <button
         onClick={() => setShowMenu(false)}
-        className={`fixed inset-0 nav h-screen w-screen  block transition-opacity bg-black opacity-50 md:hidden ${
+        name="overlay"
+        className={`fixed inset-0 nav h-screen w-screen  block bg-black opacity-50 md:hidden ${
           showMenu ? 'show z-30' : 'z-0'
         }`}
       />
