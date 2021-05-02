@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tos: React.FC = () => {
   return (
-    <div className="mx-auto max-w-3xl pt-20 md:pt-12 px-3 transition-all duration-200 dark:text-white">
+    <div className="mx-auto max-w-3xl pt-10 px-3 transition-all duration-200 dark:text-white">
       <p className="md:ml-4 text-3xl md:text-6xl font-extrabold tracking-loose md:pb-6">
         서비스 이용약관
       </p>
@@ -12,7 +12,6 @@ const Tos: React.FC = () => {
           '이 약관은 int에서 제공하는 서비스를 이용함에 있어 int와 이용자의 권리 및 의무를 규정함을 목적으로 합니다.',
         ]}
       />
-      <br />
       <TosItem
         title="제 2조 (정의)"
         textList={[
@@ -43,16 +42,16 @@ export default Tos
 
 const TosItem: React.FC<{ title: string; textList: Array<string> }> = ({ title, textList }) => {
   return (
-    <div className="mb-2">
-      <p className="font-bold text-xl md:text-4xl dark:text-gray-100 text-gray-800 md:pb-1">
+    <div className="mx-2 py-3">
+      <p className="font-bold text-2xl md:text-4xl dark:text-gray-100 text-gray-800 md:pb-1">
         {title}
       </p>
 
       <div className="text-gray-700 dark:text-gray-200 leading-loose">
         {textList.map((item) => {
           return (
-            <div className=" text-xs sm:text-sm md:text-lg pt-1" key={textList.indexOf(item)}>
-              <span className="font-medium text-sm">{textList.indexOf(item) + 1}</span>. {item}
+            <div className="pt-1" key={textList.indexOf(item)}>
+              <span className="font-medium text-md">{textList.indexOf(item) + 1}</span>. {item}
             </div>
           )
         })}

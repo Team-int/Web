@@ -67,21 +67,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div
-        className="transtition-colors duration-200 z-60 relative mx-auto rounded-2xl  "
-        id="about"
-      >
+      <div className="transtition-colors duration-200  mx-auto rounded-2xl transform -translate-y-12 bg-white dark:bg-primary">
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
           <span className="   text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
           </span>
-          <hr className="my-8 mx-2 md:mx-0 md:my-20" />
+          <hr className="my-8 mx-2 md:mx-0 md:my-20 " id="about" />
           <p className="text-center text-4xl font-bold text-gray-800 dark:text-white">팀 소개</p>
 
           <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
             Members of Team int
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4 px-4 md:px-0">
             {Object.keys(members).map((memberkey) => {
               const member = members[memberkey]
               return (
