@@ -17,9 +17,6 @@ test:
 
   image: "${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/node:14.16.0-alpine3.10"
 
-  tags: 
-   - test 
-
   script: 
   - yarn 
   - yarn test
