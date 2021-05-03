@@ -1,5 +1,15 @@
-@import "~@fontsource/inter/index.css";
-@import "~@fontsource/noto-sans-kr/index.css";
+@import "~@fontsource/inter/300.css";
+@import "~@fontsource/inter/400.css";
+@import "~@fontsource/inter/600.css";
+@import "~@fontsource/inter/700.css";
+
+
+@import "~@fontsource/noto-sans-kr/300.css";
+@import "~@fontsource/noto-sans-kr/400.css";
+@import "~@fontsource/noto-sans-kr/600.css";
+@import "~@fontsource/noto-sans-kr/700.css";
+
+
 
 @tailwind base;
 @tailwind components;
