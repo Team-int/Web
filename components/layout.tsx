@@ -1,6 +1,6 @@
-import Header from './header'
-import Footer from './footer'
-import SEO from './seo'
+import Header from 'components/header'
+import Footer from 'components/footer'
+
 type LayoutProps = {
   children: React.ReactNode
 }
@@ -8,7 +8,6 @@ type LayoutProps = {
 const Layout: React.FC = ({ children }: LayoutProps) => {
   return (
     <>
-      <SEO />
       <div className="z-10 text-black  transition-colors duration-200">
         <Header />
       </div>

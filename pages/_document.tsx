@@ -17,6 +17,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head />
+
         <body>
           <Main />
           <NextScript />

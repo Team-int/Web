@@ -3,6 +3,8 @@ import MemberCard from 'components/membercard'
 import { memberProps } from 'components/membercard'
 import { NextPage } from 'next'
 import ProjectCard from 'components/projectcard'
+import SEO from 'components/seo'
+
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
@@ -39,28 +41,29 @@ const members: Record<string, memberProps> = {
 const Home: NextPage = () => {
   return (
     <>
-      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 hero-bg">
+      <SEO />
+      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 ">
         <img
           alt=""
-          className="hero-light absolute hero w-full bg-contain object-cover"
+          className="hero-light absolute hero-image  w-full object-cover bg-cover bg-center"
           src="/static/images/light.svg"
         />
         <img
           alt=""
-          className="hero-dark bg-contain absolute hero w-full object-cover"
+          className="hero-dark  absolute hero-image w-full object-cover bg-cover bg-center "
           src="/static/images/mountain.svg"
         />
 
-        <div className="inset-0 mt-14 md:mt-20 w-full hero  absolute z-0  opacity-25"></div>
+        <div className="inset-0 w-full  absolute z-0 bg-black opacity-10 "></div>
         <div className="mx-2 px-4 hero-text z-10 ">
-          <div className="text-6xl md:text-9xl font-bold text-white ">Team int</div>
+          <div className="text-5xl sm:text-6xl md:text-9xl font-bold text-white ">Team int</div>
 
           <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-white">We live to code.</p>
 
           <div className="mt-3 md:mt-8 ">
             <a
               href="/#about"
-              className="bg-white text-gray-800 font-semibold text-sm md:text-lg py-2 px-3 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
+              className="bg-white text-gray-800 font-semibold text-sm md:text-lg py-2 px-2 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
             >
               about
             </a>

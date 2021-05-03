@@ -1,58 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.herobg {
-  background-color: #ed5d45
-}
 
-* {
-  font-family: 'Noto Sans KR', Inter, sans-serif !important;
-}
+
 html {
   scroll-behavior: smooth;
+  font-family: 'Noto Sans KR', 'Inter var', sans-serif !important;
   }
-.hero{
-  height: 50vh;
-}
+
 .hero-text {
-  margin-top: 10vh;
+  margin-top: max(40px,8vw);
   margin-left: 5vw;
+  margin-bottom:max(100px,18vw);
 }
 
+.membercard{
+  max-width: 15rem;
+} 
 
-
-@media (min-width:768px) {
-  .hero{
-    height: 60vh;
-  }
-  .hero-text {
-    margin-left:5vw;
-    margin-top: 8vh;
-  }
-}
-
-
-@media (min-width:1024px) and (min-height:640px){
-  /* ipad */
-  .hero{
-    height: 35vh;
-  }
-  .hero-text {
-    margin-left: 5vw;
-    margin-top: 5vh;
-  }
-}
-
-
-@media (min-width:1200px) {
-  .hero{
-    height: 75vh;
-  }
-  .hero-text {
-    margin-left: 6vw;
-    margin-top: 15vh;
-  }
-  
+.hero-image{
+  height:95%
 }
 
 
