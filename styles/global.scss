@@ -1,28 +1,16 @@
-@import "~@fontsource/inter/300.css";
-@import "~@fontsource/inter/400.css";
-@import "~@fontsource/inter/600.css";
-@import "~@fontsource/inter/700.css";
-
-
-@import "~@fontsource/noto-sans-kr/300.css";
-@import "~@fontsource/noto-sans-kr/400.css";
-@import "~@fontsource/noto-sans-kr/600.css";
-@import "~@fontsource/noto-sans-kr/700.css";
-
-
+@import "~@fontsource/inter/index.css";
+@import "~@fontsource/noto-sans-kr/index.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-html { 
-  scroll-behavior: smooth; font-family: 'Noto Sans KR', "Inter", "system-ui"; }
-
-@supports (font-variation-settings: normal) {
-  html {
-    scroll-behavior: smooth; font-family: 'Noto Sans KR', "Inter", "system-ui"; }
+body { 
+  scroll-behavior: smooth; font-family:'Inter', 'Noto Sans KR', sans-serif  !important;  
 }
+
+
 
 .hero-text {
   margin-top: max(40px,8vw);
@@ -48,7 +36,7 @@ ul {
   text-align: center;
 }
 li { 
-  display: table-cell; 
+  display: table-cwell; 
   position: relative; 
   padding: 15px 0;
 }
