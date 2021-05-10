@@ -31,7 +31,6 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, github }: memb
         </div>
       </div>
       <a href={github}>
-        asdf
         <AiFillGithub className="text-xl  text-white dark:bg-gray-700 bg-primary rounded-full p-1 relative  w-8 h-8" />
       </a>
     </div>
