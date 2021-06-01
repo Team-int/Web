@@ -9,6 +9,7 @@ module.exports = {
         'header':'#',
         'primary':'#141a23',
         'foreground':'#181e2a',
+        'card': '#F5F5F7',
         ...theme(colors)
       }),
       colors: {

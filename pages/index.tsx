@@ -113,6 +113,13 @@ const Home: NextPage = () => {
                 image="/static/images/projects/intbot.webp"
                 desc="지금 보고 있는 웹사이트입니다!"
               />
+              <ProjectCard
+                url="/core"
+                name="Core"
+                image="/static/images/projects/core.png"
+                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
+                도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
+              />
             </div>
           </div>
         </div>
