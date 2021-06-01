@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { AiFillGithub } from 'react-icons/ai'
-
 export type memberProps = {
   name: string
   profile: string

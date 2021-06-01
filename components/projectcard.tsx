@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 export type ProjectProps = {
   name: string
   image: string
