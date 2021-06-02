@@ -20,22 +20,46 @@ const members: Record<string, memberProps> = {
   },
   kms: {
     name: 'ALL PGS',
-    profile: '/static/images/members/kms.webp',
+    profile: '/static/images/members/allpgs.jpg',
     github: 'https://github.com/kms0219kms',
-    desc: '안녕하세요. 학생 웹 퍼블리셔 All PGS입니다!',
+    desc: 'Full stack Developer',
   },
   sujang: {
     name: 'Sujang958',
     profile: '/static/images/members/sujang.webp',
     github: 'https://github.com/sujang958',
-    desc: 'Bot list developer, Designer',
+    desc: 'Web Developer, Designer',
   },
   agg: {
-    name: 'makeGOD',
+    name: 'madeGOD',
     profile: '/static/images/members/agg.webp',
-    github: 'https://github.com/makeGOD',
-    desc: 'Intbot developer, MakeGOD.',
+    github: 'https://github.com/madeGOD',
+    desc: 'Bot developer',
   },
+  mireu: {
+    name: 'mireu',
+    profile: '/static/images/members/mireu.jpg',
+    github: 'https://github.com/Mireu-Labcon',
+    desc: 'Hosting Manager'
+  },
+  mswgen: {
+    name: 'mswgen',
+    profile: '/static/images/members/mswgen.webp',
+    github: 'https://github.com/mswgen',
+    desc: 'Web/Bot Developer'
+  },
+  studio: {
+    name: 'studio',
+    profile: '/static/images/members/studio.jpg',
+    github: 'https://github.com/thisisstudio',
+    desc: 'Bot Developer'
+  },
+  ttakku: {
+    name: 'aki',
+    profile: '/static/images/members/ttakku.png',
+    github: 'https://github.com/AkiaCode',
+    desc: 'Full stack Developer'
+  }
 }
 
 const Home: NextPage = () => {
@@ -102,7 +126,7 @@ const Home: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gaps-4 pt-5">
               <ProjectCard
                 url="https://github.com/Team-int/intbot"
-                name="intbot"
+                name="인트봇"
                 image="/static/images/projects/intbot.webp"
                 desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
                 도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
@@ -110,15 +134,14 @@ const Home: NextPage = () => {
               <ProjectCard
                 url="https://lab.jcde.xyz/Team-int/Web"
                 name="Web"
-                image="/static/images/projects/intbot.webp"
-                desc="지금 보고 있는 웹사이트입니다!"
+                image="/static/images/symbol.webp"
+                desc="지금 보고 있는 웹사이트입니다."
               />
               <ProjectCard
                 url="/core"
                 name="Core"
                 image="/static/images/projects/core.png"
-                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
-                도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
+                desc="진행 중인 프로젝트입니다."
               />
             </div>
           </div>
