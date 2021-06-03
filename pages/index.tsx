@@ -46,7 +46,7 @@ const members: Record<string, memberProps> = {
     name: 'mswgen',
     profile: '/static/images/members/mswgen.webp',
     github: 'https://github.com/mswgen',
-    desc: 'Web/Bot Developer'
+    desc: 'Full stack Developer'
   },
   studio: {
     name: 'studio',
@@ -101,6 +101,12 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/controld.jpg',
     github: 'https://github.com/copecone',
     desc: 'Bot Developer'
+  },
+  soulkirs: {
+    name: 'soulkirs',
+    profile: '/static/images/members/soulkirs.png',
+    github: 'https://github.com/soulkirs-main',
+    desc: 'Security Specialist'
   },
 }
 
