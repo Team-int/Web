@@ -90,9 +90,9 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/jwkim101201',
     desc: 'Backend Developer'
   },
-  missile: {
-    name: 'missile',
-    profile: '/static/images/members/missile.png',
+  misile: {
+    name: 'misile',
+    profile: '/static/images/members/misile.png',
     github: 'https://github.com/MisileLab',
     desc: 'Bot Developer'
   },
