@@ -91,14 +91,14 @@ const members: Record<string, memberProps> = {
     desc: 'Backend Developer'
   },
   missile: {
-    name: 'missile',
-    profile: '/static/images/members/missile.png',
+    name: 'misile',
+    profile: '/static/images/members/misile.png',
     github: 'https://github.com/MisileLab',
     desc: 'Bot Developer'
   },
   controld: {
     name: 'control D',
-    profile: '/static/images/members/controld.png',
+    profile: '/static/images/members/controld.jpg',
     github: 'https://github.com/copecone',
     desc: 'Bot Developer'
   },
