@@ -19,7 +19,7 @@ const members: Record<string, memberProps> = {
     desc: 'Full stack developer',
   },
   kms: {
-    name: 'ALL PGS',
+    name: 'All PGS',
     profile: '/static/images/members/allpgs.jpg',
     github: 'https://github.com/kms0219kms',
     desc: 'Full stack Developer',
@@ -67,7 +67,7 @@ const members: Record<string, memberProps> = {
     desc: 'Bot Developer'
   },
   simsimler: {
-    name: 'simsimler',
+    name: 'simSimler',
     profile: '/static/images/members/simsimler.webp',
     github: 'https://github.com/simsimler',
     desc: 'Bot Developer'
@@ -94,6 +94,12 @@ const members: Record<string, memberProps> = {
     name: 'missile',
     profile: '/static/images/members/missile.png',
     github: 'https://github.com/MisileLab',
+    desc: 'Bot Developer'
+  },
+  controld: {
+    name: 'control D',
+    profile: '/static/images/members/controld.png',
+    github: 'https://github.com/copecone',
     desc: 'Bot Developer'
   },
 }
