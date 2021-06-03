@@ -10,13 +10,13 @@ const members: Record<string, memberProps> = {
     name: 'Chul0721',
     profile: '/static/images/members/chul.webp',
     github: 'https://github.com/chul0721',
-    desc: 'Founder, Full stack developer',
+    desc: 'Team Leader',
   },
   JcdeA: {
     name: 'JcdeA',
     profile: '/static/images/members/io.webp',
     github: 'https://github.com/JcdeA',
-    desc: 'Full stack developer, Designer, I use arch btw',
+    desc: 'Full stack developer',
   },
   kms: {
     name: 'ALL PGS',
@@ -26,9 +26,9 @@ const members: Record<string, memberProps> = {
   },
   sujang: {
     name: 'Sujang958',
-    profile: '/static/images/members/sujang.webp',
+    profile: '/static/images/members/sujang.jpg',
     github: 'https://github.com/sujang958',
-    desc: 'Web Developer, Designer',
+    desc: 'Web Developer',
   },
   agg: {
     name: 'madeGOD',
@@ -59,7 +59,43 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/ttakku.png',
     github: 'https://github.com/AkiaCode',
     desc: 'Full stack Developer'
-  }
+  },
+  bainble: {
+    name: 'bainble',
+    profile: '/static/images/members/bainble.webp',
+    github: 'https://github.com/Bainble0211',
+    desc: 'Bot Developer'
+  },
+  simsimler: {
+    name: 'simsimler',
+    profile: '/static/images/members/simsimler.webp',
+    github: 'https://github.com/simsimler',
+    desc: 'Bot Developer'
+  },
+  seoungbum: {
+    name: 'heosungbum',
+    profile: '/static/images/members/sungbum.png',
+    github: 'https://github.com/heosungbum',
+    desc: 'Bot Developer'
+  },
+  comjun: {
+    name: 'comjun',
+    profile: '/static/images/members/comjun.webp',
+    github: 'https://github.com/comjun04',
+    desc: 'Forum Manager'
+  },
+  kkels: {
+    name: 'kkels',
+    profile: '/static/images/members/kkels.png',
+    github: 'https://github.com/jwkim101201',
+    desc: 'Backend Developer'
+  },
+  missile: {
+    name: 'missile',
+    profile: '/static/images/members/missile.png',
+    github: 'https://github.com/MisileLab',
+    desc: 'Bot Developer'
+  },
 }
 
 const Home: NextPage = () => {
@@ -128,7 +164,7 @@ const Home: NextPage = () => {
                 url="https://github.com/Team-int/intbot"
                 name="인트봇"
                 image="/static/images/projects/intbot.webp"
-                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
+                desc="다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
                 도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
               />
               <ProjectCard
