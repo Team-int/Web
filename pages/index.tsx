@@ -18,12 +18,6 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/JcdeA',
     desc: 'Full stack developer',
   },
-  kms: {
-    name: 'All PGS',
-    profile: '/static/images/members/allpgs.jpg',
-    github: 'https://github.com/kms0219kms',
-    desc: 'Full stack Developer',
-  },
   sujang: {
     name: 'Sujang958',
     profile: '/static/images/members/sujang.jpg',
@@ -70,12 +64,6 @@ const members: Record<string, memberProps> = {
     name: 'simSimler',
     profile: '/static/images/members/simsimler.webp',
     github: 'https://github.com/simsimler',
-    desc: 'Bot Developer'
-  },
-  seoungbum: {
-    name: 'heosungbum',
-    profile: '/static/images/members/sungbum.png',
-    github: 'https://github.com/heosungbum',
     desc: 'Bot Developer'
   },
   comjun: {
