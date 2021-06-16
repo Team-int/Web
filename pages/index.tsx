@@ -10,31 +10,91 @@ const members: Record<string, memberProps> = {
     name: 'Chul0721',
     profile: '/static/images/members/chul.webp',
     github: 'https://github.com/chul0721',
-    desc: 'Founder, Full stack developer',
+    desc: 'Team Leader',
   },
   JcdeA: {
     name: 'JcdeA',
     profile: '/static/images/members/io.webp',
     github: 'https://github.com/JcdeA',
-    desc: 'Full stack developer, Designer, I use arch btw',
-  },
-  kms: {
-    name: 'ALL PGS',
-    profile: '/static/images/members/kms.webp',
-    github: 'https://github.com/kms0219kms',
-    desc: '안녕하세요. 학생 웹 퍼블리셔 All PGS입니다!',
+    desc: 'Full stack developer',
   },
   sujang: {
     name: 'Sujang958',
-    profile: '/static/images/members/sujang.webp',
+    profile: '/static/images/members/sujang.jpg',
     github: 'https://github.com/sujang958',
-    desc: 'Bot list developer, Designer',
+    desc: 'Web Developer',
   },
   agg: {
-    name: 'makeGOD',
+    name: 'madeGOD',
     profile: '/static/images/members/agg.webp',
-    github: 'https://github.com/makeGOD',
-    desc: 'Intbot developer, MakeGOD.',
+    github: 'https://github.com/madeGOD',
+    desc: 'Bot developer',
+  },
+  mireu: {
+    name: 'mireu',
+    profile: '/static/images/members/mireu.jpg',
+    github: 'https://github.com/Mireu-Labcon',
+    desc: 'Hosting Manager'
+  },
+  mswgen: {
+    name: 'mswgen',
+    profile: '/static/images/members/mswgen.webp',
+    github: 'https://github.com/mswgen',
+    desc: 'Full stack Developer'
+  },
+  studio: {
+    name: 'studio',
+    profile: '/static/images/members/studio.jpg',
+    github: 'https://github.com/thisisstudio',
+    desc: 'Bot Developer'
+  },
+  ttakku: {
+    name: 'aki',
+    profile: '/static/images/members/ttakku.png',
+    github: 'https://github.com/AkiaCode',
+    desc: 'Full stack Developer'
+  },
+  bainble: {
+    name: 'bainble',
+    profile: '/static/images/members/bainble.webp',
+    github: 'https://github.com/Bainble0211',
+    desc: 'Bot Developer'
+  },
+  simsimler: {
+    name: 'simSimler',
+    profile: '/static/images/members/simsimler.webp',
+    github: 'https://github.com/simsimler',
+    desc: 'Bot Developer'
+  },
+  comjun: {
+    name: 'comjun',
+    profile: '/static/images/members/comjun.webp',
+    github: 'https://github.com/comjun04',
+    desc: 'Forum Manager'
+  },
+  kkels: {
+    name: 'kkels',
+    profile: '/static/images/members/kkels.png',
+    github: 'https://github.com/jwkim101201',
+    desc: 'Backend Developer'
+  },
+  missile: {
+    name: 'misile',
+    profile: '/static/images/members/misile.png',
+    github: 'https://github.com/MisileLab',
+    desc: 'Bot Developer'
+  },
+  controld: {
+    name: 'control D',
+    profile: '/static/images/members/controld.jpg',
+    github: 'https://github.com/copecone',
+    desc: 'Bot Developer'
+  },
+  soulkirs: {
+    name: 'soulkirs',
+    profile: '/static/images/members/soulkirs.png',
+    github: 'https://github.com/soulkirs-main',
+    desc: 'Security Specialist'
   },
 }
 
@@ -102,23 +162,22 @@ const Home: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gaps-4 pt-5">
               <ProjectCard
                 url="https://github.com/Team-int/intbot"
-                name="intbot"
+                name="인트봇"
                 image="/static/images/projects/intbot.webp"
-                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
+                desc="다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
                 도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
               />
               <ProjectCard
                 url="https://lab.jcde.xyz/Team-int/Web"
                 name="Web"
-                image="/static/images/projects/intbot.webp"
-                desc="지금 보고 있는 웹사이트입니다!"
+                image="/static/images/symbol.webp"
+                desc="지금 보고 있는 웹사이트입니다."
               />
               <ProjectCard
                 url="/core"
                 name="Core"
                 image="/static/images/projects/core.png"
-                desc="팀 int 에서 개발된 다양한 재밌는 엔터테인먼트 기능들을 갖고 있는 디스코드 봇 입니다.
-                도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다."
+                desc="진행 중인 프로젝트입니다."
               />
             </div>
           </div>
