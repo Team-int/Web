@@ -4,8 +4,6 @@ import Image from 'next/image'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import dynamic from 'next/dynamic'
 
-const DynamicMobileNav = dynamic(() => import('./mobileNav'))
-
 const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
   toggleDarkMode,
   darkTheme,
@@ -51,6 +49,7 @@ const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [darkTheme, setDarkTheme] = useState(false)
+  const DynamicMobileNav = dynamic(() => import('./mobileNav'))
 
   const toggleDarkMode = (): void => {
     // Whenever the user explicitly chooses light mode
@@ -87,11 +86,11 @@ const Header: FC = () => {
       <nav className="  shadow  transition-colors duration 200 fixed px-4 md:px-6 py-5 md:py-6 bg-white text-black dark:bg-gray-800 z-50 w-full h-16 md:h-20">
         <div className="max-w-8xl m-auto md:px-2">
           <div className="flex justify-between items-center">
-            <div className="flex items-center">
+            <div className="flex items-center ">
               <Image alt="logo" src="/static/images/symbol.webp" height={30} width={30} />
               <div className=" pl-2 ">
                 <Link href="/">
-                  <span className="text-xl md:text-2xl font-semibold tracking-tight flex items-center flex-shrink-0  md:mr-6 text-black  dark:text-white">
+                  <span className="text-xl md:text-2xl font-semibold tracking-tight flex items-center flex-shrink-0  md:mr-6  text-black dark:text-white">
                     Team int
                   </span>
                 </Link>

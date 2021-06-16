@@ -8,7 +8,7 @@ export type memberProps = {
 }
 const MemberCard: React.FC<memberProps> = ({ name, profile, desc, github }: memberProps) => {
   return (
-    <div className="membercard p-4  rounded-xl border shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl justify-center m-auto dark:border-gray-400">
+    <div className="membercard p-4  rounded-xl border border-gray-200 dark:border-gray-700 shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl justify-center m-auto">
       <div className="flex-col  flex justify-center items-center ">
         <div className="flex-shrink-0">
           <a href={github} className="block ">

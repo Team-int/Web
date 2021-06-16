@@ -11,20 +11,20 @@ body {
 }
 
 
-
-.hero-text {
-  margin-top: max(40px,8vw);
-  margin-left: 5vw;
-  margin-bottom:max(100px,18vw);
+  .hero {
+    height: 30vh;
+  }
+  
+@media (min-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
 }
 
 .membercard{
   max-width: 15rem;
 } 
 
-.hero-image{
-  height:95%
-}
 
 
 ul { 

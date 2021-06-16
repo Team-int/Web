@@ -42,21 +42,21 @@ const Home: NextPage = () => {
   return (
     <>
       <SEO />
-      <div className="w-full transition-all relative z-0 hero flex sm:px-0 duration-200 ">
+      <div className="w-full transition-all hero z-0 flex sm:px-0 duration-200 ">
         <img
           alt=""
-          className="hero-light absolute hero-image  w-full object-cover bg-cover bg-center"
+          className="hero-light absolute w-full object-cover h-1/3 bg-cover bg-center"
           src="/static/images/light.svg"
         />
         <img
           alt=""
-          className="hero-dark  absolute hero-image w-full object-cover bg-cover bg-center "
+          className="hero-dark  absolute  w-full object-cover h-1/3  bg-cover bg-center "
           src="/static/images/mountain.svg"
         />
 
-        <div className="inset-0 w-full  absolute z-0 bg-black opacity-10 "></div>
-        <div className="mx-2 px-4 hero-text z-10 ">
-          <div className="text-5xl sm:text-6xl md:text-9xl font-bold text-white ">Team int</div>
+        <div className="inset-0 w-full absolute z-10 bg-black opacity-10 "></div>
+        <div className=" px-4 pt-6 md:pt-16 z-10" style={{ paddingLeft: '8vw' }}>
+          <div className="text-5xl md:text-9xl font-bold text-white ">Team int</div>
 
           <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-white">We live to code.</p>
 
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="transtition-colors duration-200  mx-auto rounded-2xl transform -translate-y-12 bg-white dark:bg-primary">
+      <div className="transtition-colors relative duration-200 z-20  mx-auto rounded-2xl bg-white dark:bg-primary">
         <div className="p-4 mx-auto max-w-5xl pt-12   text-center ">
           <span className="   text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
