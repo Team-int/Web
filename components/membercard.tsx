@@ -8,18 +8,11 @@ export type memberProps = {
 }
 const MemberCard: React.FC<memberProps> = ({ name, profile, desc, github }: memberProps) => {
   return (
-    <div className="membercard p-4  rounded-xl border border-gray-200 dark:border-gray-700 shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl justify-center m-auto">
+    <div className="membercard p-4  rounded-xl border border-gray-200 dark:border-gray-600 shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl m-auto">
       <div className="flex-col  flex justify-center items-center ">
-        <div className="flex-shrink-0">
-          <a href={github} className="block ">
-            <Image
-              src={profile}
-              width={70}
-              height={70}
-              layout="fixed"
-              alt="profile"
-              className="rounded-full profile bg-white"
-            />
+        <div className="">
+          <a href={github} className="block">
+            <Image src={profile} className="rounded-full" width={70} height={70} alt={name} />
           </a>
         </div>
         <div className="mt-2 text-center flex flex-col">
@@ -29,7 +22,7 @@ const MemberCard: React.FC<memberProps> = ({ name, profile, desc, github }: memb
           </p>
         </div>
       </div>
-      <a href={github} target="_blank">
+      <a href={github} target="_blank" rel="noreferrer">
         <AiFillGithub className="text-xl  text-white dark:bg-gray-700 bg-primary rounded-full p-1 relative  w-8 h-8" />
       </a>
     </div>

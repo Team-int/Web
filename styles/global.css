@@ -1,16 +1,23 @@
-@import "~@fontsource/inter/index.css";
-@import "~@fontsource/noto-sans-kr/index.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-body { 
-  scroll-behavior: smooth; font-family:'Inter', 'Noto Sans KR', sans-serif  !important;  
+:root { font-family: 'Inter','Noto Sans KR' ,sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var','Noto Sans KR' ,sans-serif; }
 }
 
 
+html { 
+  scroll-behavior: smooth; 
+ 
+}
+
+.projectcard{
+  width:19em;
+  height:38vh;
+}
   .hero {
     height: 30vh;
   }
@@ -24,7 +31,6 @@ body {
 .membercard{
   max-width: 15rem;
 } 
-
 
 
 ul { 
@@ -138,4 +144,21 @@ li {
 100% {
     transform: rotate(360deg);
   }
+}
+
+.hero {
+
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero{
+  background-image:  url("/static/images/light.svg");
+}
+
+.dark .hero{
+  background-image: url("/static/images/mountain.svg");
 }

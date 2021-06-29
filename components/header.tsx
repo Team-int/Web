@@ -2,8 +2,7 @@ import { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import dynamic from 'next/dynamic'
-
+import MobileNav from './mobileNav'
 const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
   toggleDarkMode,
   darkTheme,
@@ -49,7 +48,6 @@ const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
 const Header: FC = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [darkTheme, setDarkTheme] = useState(false)
-  const DynamicMobileNav = dynamic(() => import('./mobileNav'))
 
   const toggleDarkMode = (): void => {
     // Whenever the user explicitly chooses light mode
@@ -90,9 +88,11 @@ const Header: FC = () => {
               <Image alt="logo" src="/static/images/symbol.webp" height={30} width={30} />
               <div className=" pl-2 ">
                 <Link href="/">
-                  <span className="text-xl md:text-2xl font-semibold tracking-tight flex items-center flex-shrink-0  md:mr-6  text-black dark:text-white">
-                    Team int
-                  </span>
+                  <a href="/">
+                    <span className="text-xl md:text-2xl font-semibold tracking-tight flex items-center flex-shrink-0  md:mr-6  text-black dark:text-white">
+                      Team int
+                    </span>
+                  </a>
                 </Link>
               </div>
               <div className="hidden md:flex items-center  text-lg  text-black  dark:text-white mx-6">
@@ -124,7 +124,7 @@ const Header: FC = () => {
           </div>
         </div>
       </nav>
-      <DynamicMobileNav setShowMenu={setShowMenu} showMenu={showMenu} />
+      <MobileNav setShowMenu={setShowMenu} showMenu={showMenu} />
     </>
   )
 }
