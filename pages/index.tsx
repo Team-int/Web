@@ -128,7 +128,7 @@ const Home: NextPage = () => {
           <div id="about"></div>
           <hr className="my-8  mx-2 md:mx-0 md:my-16 border-gray-400 " />
 
-          <p className="text-center text-4xl md:text-5xl pt-4 pb-1 font-bold text-gray-800 dark:text-white">
+          <p className="text-center text-4xl md:text-5xl pt-4 pb-1 font-medium text-gray-800 dark:text-white">
             팀 소개
           </p>
           <p className="text-center mb-5 text-xl font-normal text-gray-500 dark:text-gray-300">
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
             })}
           </div>
           <div className="rounded-xl p-4 pt-20 ">
-            <p className="text-5xl pb-1 font-semibold">프로젝트 소개</p>
+            <p className="text-5xl pb-1 font-medium">프로젝트 소개</p>
             <div className="flex flex-wrap gap-4 pt-5">
               <ProjectCard
                 url="https://github.com/Team-int/intbot"
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
                 desc={
                   <p>
                     다양하고 재밌는 엔터테인먼트 <br /> 기능들을 갖고 있는{' '}
-                    <span className="font-semibold ">디스코드 봇!</span>
+                    <span className="font-medium">디스코드 봇!</span>
                     <br /> 도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다.
                   </p>
                 }
@@ -170,7 +170,7 @@ const Home: NextPage = () => {
                 image="/static/images/symbol.webp"
                 desc={
                   <>
-                    지금 보고 있는 <span className="font-semibold">웹사이트</span>입니다.
+                    지금 보고 있는 <span className="font-medium">웹사이트</span>입니다.
                   </>
                 }
               />
