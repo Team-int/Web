@@ -30,17 +30,11 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/madeGOD',
     desc: 'Bot developer',
   },
-  mireu: {
-    name: 'mireu',
-    profile: '/static/images/members/mireu.jpg',
-    github: 'https://github.com/Mireu-Labcon',
-    desc: 'Hosting Manager',
-  },
   mswgen: {
     name: 'mswgen',
     profile: '/static/images/members/mswgen.webp',
     github: 'https://github.com/mswgen',
-    desc: 'Full stack Developer',
+    desc: 'Bot Developer',
   },
   studio: {
     name: 'studio',
@@ -67,7 +61,7 @@ const members: Record<string, memberProps> = {
     desc: 'Bot Developer',
   },
   comjun: {
-    name: 'comjun',
+    name: 'comjun04',
     profile: '/static/images/members/comjun.webp',
     github: 'https://github.com/comjun04',
     desc: 'Forum Manager',
@@ -82,12 +76,6 @@ const members: Record<string, memberProps> = {
     name: 'misile',
     profile: '/static/images/members/misile.png',
     github: 'https://github.com/MisileLab',
-    desc: 'Bot Developer',
-  },
-  controld: {
-    name: 'control D',
-    profile: '/static/images/members/controld.jpg',
-    github: 'https://github.com/copecone',
     desc: 'Bot Developer',
   },
   soulkirs: {
@@ -165,13 +153,15 @@ const Home: NextPage = () => {
                 }
               />
               <ProjectCard
-                url="https://lab.jcde.xyz/Team-int/Web"
-                name="Web"
+                url="https://github.com/Team-int/nammu-bot"
+                name="나무 봇"
                 image="/static/images/symbol.webp"
                 desc={
-                  <>
-                    지금 보고 있는 <span className="font-medium">웹사이트</span>입니다.
-                  </>
+                  <p>
+                    임베드,
+                    <span className="font-medium">쉽고 간편하고 빠르게</span>
+                    작성하세요.
+                  </p>
                 }
               />
               <ProjectCard
