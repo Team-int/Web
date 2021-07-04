@@ -8,7 +8,7 @@ import SEO from 'components/seo'
 const members: Record<string, memberProps> = {
   chul0721: {
     name: 'Chul0721',
-    profile: '/static/images/members/chul.webp',
+    profile: '/static/images/members/chul0721.jpg',
     github: 'https://github.com/chul0721',
     desc: 'Team Leader',
   },
@@ -37,14 +37,14 @@ const members: Record<string, memberProps> = {
     desc: 'Bot Developer',
   },
   studio: {
-    name: 'studio',
+    name: 'nox',
     profile: '/static/images/members/studio.jpg',
     github: 'https://github.com/thisisstudio',
     desc: 'Bot Developer',
   },
   ttakku: {
     name: 'aki',
-    profile: '/static/images/members/ttakku.png',
+    profile: '/static/images/members/ttakku.jpeg',
     github: 'https://github.com/AkiaCode',
     desc: 'Full stack Developer',
   },
@@ -66,11 +66,23 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/comjun04',
     desc: 'Forum Manager',
   },
+  csh: {
+    name: 'CSH',
+    profile: '/static/images/members/csh.png',
+    github: 'https://github.com/CSH3235',
+    desc: 'Forum Manager',
+  },
   kkels: {
     name: 'kkels',
     profile: '/static/images/members/kkels.png',
     github: 'https://github.com/jwkim101201',
     desc: 'Backend Developer',
+  },
+  lukekeum: {
+    name: 'lukekeum',
+    profile: '/static/images/members/jungbin.jpeg',
+    github: 'https://github.com/lukekeum',
+    desc: 'Full Stack Developer',
   },
   missile: {
     name: 'misile',
@@ -83,6 +95,18 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/soulkirs.png',
     github: 'https://github.com/soulkirs-main',
     desc: 'Security Specialist',
+  },
+  issac: {
+    name: 'issac',
+    profile: '/static/images/members/shimshim.jpeg',
+    github: 'https://github.com/issac4892',
+    desc: 'Bot Developer',
+  },
+  lineking: {
+    name: 'lineking',
+    profile: '/static/images/members/lineking.png',
+    github: 'https://github.com/LINEKING2100',
+    desc: 'Designer',
   },
 }
 
