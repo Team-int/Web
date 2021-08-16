@@ -1,114 +1,9 @@
 import React from 'react'
 import MemberCard from 'components/membercard'
-import { memberProps } from 'components/membercard'
 import { NextPage } from 'next'
 import ProjectCard from 'components/projectcard'
 import SEO from 'components/seo'
-
-const members: Record<string, memberProps> = {
-  chul0721: {
-    name: 'Chul0721',
-    profile: '/static/images/members/chul0721.jpg',
-    github: 'https://github.com/chul0721',
-    desc: 'Team Leader',
-  },
-  JcdeA: {
-    name: 'JcdeA',
-    profile: '/static/images/members/io.webp',
-    github: 'https://github.com/JcdeA',
-    desc: 'Full stack developer',
-  },
-  sujang: {
-    name: 'Sujang958',
-    profile: '/static/images/members/sujang.jpg',
-    github: 'https://github.com/sujang958',
-    desc: 'Web Developer',
-  },
-  agg: {
-    name: 'madeGOD',
-    profile: '/static/images/members/agg.webp',
-    github: 'https://github.com/madeGOD',
-    desc: 'Bot developer',
-  },
-  mswgen: {
-    name: 'mswgen',
-    profile: '/static/images/members/mswgen.webp',
-    github: 'https://github.com/mswgen',
-    desc: 'Bot Developer',
-  },
-  studio: {
-    name: 'nox',
-    profile: '/static/images/members/studio.jpg',
-    github: 'https://github.com/thisisstudio',
-    desc: 'Bot Developer',
-  },
-  ttakku: {
-    name: 'aki',
-    profile: '/static/images/members/ttakku.jpeg',
-    github: 'https://github.com/AkiaCode',
-    desc: 'Full stack Developer',
-  },
-  bainble: {
-    name: 'bainble',
-    profile: '/static/images/members/bainble.webp',
-    github: 'https://github.com/Bainble0211',
-    desc: 'Bot Developer',
-  },
-  simsimler: {
-    name: 'simSimler',
-    profile: '/static/images/members/simsimler.webp',
-    github: 'https://github.com/simsimler',
-    desc: 'Bot Developer',
-  },
-  comjun: {
-    name: 'comjun04',
-    profile: '/static/images/members/comjun.webp',
-    github: 'https://github.com/comjun04',
-    desc: 'Forum Manager',
-  },
-  csh: {
-    name: 'CSH',
-    profile: '/static/images/members/csh.png',
-    github: 'https://github.com/CSH3235',
-    desc: 'Forum Manager',
-  },
-  kkels: {
-    name: 'kkels',
-    profile: '/static/images/members/kkels.png',
-    github: 'https://github.com/jwkim101201',
-    desc: 'Backend Developer',
-  },
-  lukekeum: {
-    name: 'lukekeum',
-    profile: '/static/images/members/jungbin.jpeg',
-    github: 'https://github.com/lukekeum',
-    desc: 'Full Stack Developer',
-  },
-  missile: {
-    name: 'misile',
-    profile: '/static/images/members/misile.png',
-    github: 'https://github.com/MisileLab',
-    desc: 'Bot Developer',
-  },
-  soulkirs: {
-    name: 'soulkirs',
-    profile: '/static/images/members/soulkirs.png',
-    github: 'https://github.com/soulkirs-main',
-    desc: 'Security Specialist',
-  },
-  issac: {
-    name: 'issac',
-    profile: '/static/images/members/shimshim.jpeg',
-    github: 'https://github.com/issac4892',
-    desc: 'Bot Developer',
-  },
-  lineking: {
-    name: 'lineking',
-    profile: '/static/images/members/lineking.png',
-    github: 'https://github.com/LINEKING2100',
-    desc: 'Designer',
-  },
-}
+import members from 'components/data'
 
 const Home: NextPage = () => {
   return (
@@ -167,32 +62,37 @@ const Home: NextPage = () => {
               <ProjectCard
                 url="https://github.com/Team-int/intbot"
                 name="인트봇"
-                image="/static/images/projects/intbot.webp"
+                image="/static/images/projects/intbot.png"
                 desc={
                   <p>
-                    다양하고 재밌는 엔터테인먼트 <br /> 기능들을 갖고 있는{' '}
-                    <span className="font-medium">디스코드 봇!</span>
-                    <br /> 도박, 대시보드, 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다.
+                    다양한 기능이 있는 엔터테인먼트 <br />
+                    <span className="font-medium">디스코드 봇</span>입니다.
+                    <br /> 음악, 게임 등 다양한 컨텐츠를 갖고 있습니다.
                   </p>
                 }
               />
               <ProjectCard
                 url="https://github.com/Team-int/nammu-bot"
-                name="나무 봇"
+                name="나무봇"
                 image="/static/images/symbol.webp"
                 desc={
                   <p>
                     임베드,
-                    <span className="font-medium">쉽고 간편하고 빠르게</span>
+                    <span className="font-medium"> 쉽고 간편하고 빠르게 </span>
                     작성하세요.
                   </p>
                 }
               />
               <ProjectCard
                 url="/core"
-                name="Core"
+                name="코어봇"
                 image="/static/images/projects/core.png"
-                desc="개발중인 디스코드 봇입니다."
+                desc={
+                  <p>
+                    봇 한 개만으로도 서버 초기 설정부터 서버 관리까지 전부 커버가 가능하도록 설계된 <br />
+                    개발중인 디스코드 봇, 코어봇입니다.
+                  </p>
+                }
               />
             </div>
           </div>
