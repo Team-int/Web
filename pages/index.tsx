@@ -89,7 +89,8 @@ const Home: NextPage = () => {
                 image="/static/images/projects/core.png"
                 desc={
                   <p>
-                    봇 한 개만으로도 서버 초기 설정부터 서버 관리까지 전부 커버가 가능하도록 설계된 <br />
+                    봇 한 개만으로도 서버 초기 설정부터 서버 관리까지 전부 커버가 가능하도록 설계된{' '}
+                    <br />
                     개발중인 디스코드 봇, 코어봇입니다.
                   </p>
                 }

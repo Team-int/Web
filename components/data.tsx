@@ -12,7 +12,7 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/io.webp',
     github: 'https://github.com/JcdeA',
     desc: 'Full stack developer',
-  }, 
+  },
   sujang958: {
     name: 'Sujang958',
     profile: '/static/images/members/sujang.jpg',
@@ -23,7 +23,7 @@ const members: Record<string, memberProps> = {
     name: 'Sopnei',
     profile: '/static/images/members/sopnei.png',
     github: 'https://github.com/onion8513',
-    desc: 'Backend developer'
+    desc: 'Backend developer',
   },
   agg: {
     name: 'madeGOD',
