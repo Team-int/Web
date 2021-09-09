@@ -36,9 +36,9 @@ jobs:
             ${{ runner.OS }}-
       - name: Build
         run: |
-          npm ci --legacy-peer-deps
-          npm run build
-          npm run export
+          yarn install --frozen-lockfile
+          yarn build
+          yarn export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
