@@ -31,18 +31,6 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/madeGOD',
     desc: 'Bot developer',
   },
-  mswgen: {
-    name: 'mswgen',
-    profile: '/static/images/members/mswgen.webp',
-    github: 'https://github.com/mswgen',
-    desc: 'Bot Developer',
-  },
-  studio: {
-    name: 'nox',
-    profile: '/static/images/members/studio.jpg',
-    github: 'https://github.com/thisisstudio',
-    desc: 'Bot Developer',
-  },
   ttakku: {
     name: 'aki',
     profile: '/static/images/members/ttakku.jpeg',
@@ -73,30 +61,6 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/CSH3235',
     desc: 'Forum Manager',
   },
-  kkels: {
-    name: 'kkels',
-    profile: '/static/images/members/kkels.png',
-    github: 'https://github.com/jwkim101201',
-    desc: 'Backend Developer',
-  },
-  lukekeum: {
-    name: 'lukekeum',
-    profile: '/static/images/members/jungbin.jpeg',
-    github: 'https://github.com/lukekeum',
-    desc: 'Full Stack Developer',
-  },
-  missile: {
-    name: 'misile',
-    profile: '/static/images/members/misile.png',
-    github: 'https://github.com/MisileLab',
-    desc: 'Bot Developer',
-  },
-  soulkirs: {
-    name: 'soulkirs',
-    profile: '/static/images/members/soulkirs.png',
-    github: 'https://github.com/soulkirs-main',
-    desc: 'Security Specialist',
-  },
   issac: {
     name: 'issac',
     profile: '/static/images/members/shimshim.jpeg',
@@ -114,6 +78,12 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/kirist.png',
     github: 'https://github.com/KiRist-code',
     desc: 'Forum Manager',
+  },
+  tmvkrpxl0: {
+    name: 'tmvkrpxl0',
+    profile: '/static/images/members/tmvkrpxl0.jpeg',
+    github: 'https://github.com/tmvkrpxl0',
+    desc: 'Minecraft Developer',
   },
 }
 
