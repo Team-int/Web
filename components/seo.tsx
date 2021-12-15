@@ -2,7 +2,6 @@ import Head from 'next/head'
 const SEO: React.FC<{ title?: string }> = ({ title }) => {
   return (
     <Head>
-
       <link
         rel="preload stylesheet"
         href="https://rsms.me/inter/inter.css"

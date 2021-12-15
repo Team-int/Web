@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
         <Link href="/tos">Terms</Link>
       </div>
       <div className="pt-2 dark:text-gray-100 md:pt-4 font-light whitespace-pre-wrap text-xs md:text-sm mx-auto text-center text-gray-700 leading-relaxed">
-        © {new Date().getFullYear()} <a href="https://github.com/JcdeA">Jeeho Ahn, Chul0721 </a>for Team
-        Int, Built with
+        © {new Date().getFullYear()} <a href="https://github.com/JcdeA">Jeeho Ahn, Chul0721 </a>for
+        Team Int, Built with
         <a href="https://nextjs.org"> Next.js </a>
         <div className=" dark:text-gray-200 font-light  whitespace-pre-wrap">
           View source on

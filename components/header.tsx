@@ -12,7 +12,6 @@ const DarkToggle: FC<{ toggleDarkMode: () => void; darkTheme: boolean }> = ({
       {darkTheme && <span className="w-10 mr-2 text-white">Dark</span>}
       {!darkTheme && <span className="w-10 mr-2 text-black ">Light</span>}
 
-   
       <input
         className="w-0 h-0 hidden"
         type="checkbox"
@@ -90,12 +89,12 @@ const Header: FC = () => {
               </div>
             </div>
 
-              <div className="flex flex-row items-center">
-                <DarkToggle darkTheme={darkTheme} toggleDarkMode={toggleDarkMode} />
-                <GiHamburgerMenu
-                  onClick={() => (showMenu ? setShowMenu(false) : setShowMenu(true))}
-                  className="text-black dark:text-white ml-2 sm:ml-4 h-6 w-6 block md:hidden"
-                />
+            <div className="flex flex-row items-center">
+              <DarkToggle darkTheme={darkTheme} toggleDarkMode={toggleDarkMode} />
+              <GiHamburgerMenu
+                onClick={() => (showMenu ? setShowMenu(false) : setShowMenu(true))}
+                className="text-black dark:text-white ml-2 sm:ml-4 h-6 w-6 block md:hidden"
+              />
             </div>
           </div>
         </div>

@@ -10,19 +10,22 @@ const Home: NextPage = () => {
     <>
       <SEO />
       <div className="w-full pt-48 pb-96 transition-all sm:px-0 duration-200 hero text-center">
-        
-          <div className="text-5xl md:text-9xl font-semibold text-black font-mono dark:text-white">Team int</div>
+        <div className="text-5xl md:text-9xl font-semibold text-black font-mono dark:text-white">
+          Team int
+        </div>
 
-          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-black font-mono dark:text-white">We live to code.</p>
+        <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-black font-mono dark:text-white">
+          We live to code.
+        </p>
 
-          <div className="mt-3 md:mt-8 ">
-            <a
-              href="/#about"
-              className="bg-white text-gray-800 font-mono font-semibold text-sm md:text-lg py-2 px-2 md:py-3 md:px-4 text-medium rounded-lg shadow sm:ml-5"
-            >
+        <div className="mt-3 md:mt-8 ">
+          <a
+            href="/#about"
+            className="bg-white text-gray-800 font-mono font-semibold text-sm md:text-lg py-2 px-2 md:py-3 md:px-4 text-medium rounded-lg shadow sm:ml-5"
+          >
             About
-            </a>
-        </div>  
+          </a>
+        </div>
       </div>
 
       <div className="transtition-colors relative duration-200 z-20  mx-auto rounded-2xl bg-white dark:bg-primary">
