@@ -6,9 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: theme => ({
-        'header':'#',
-        'primary':'#141a23',
-        'foreground':'#181e2a',
+        'primary':'black',
+        'foreground':'#333333',
         'card': '#F5F5F7',
         ...theme(colors)
       }),

@@ -9,9 +9,9 @@ export type ProjectProps = {
 }
 const ProjectCard: React.FC<ProjectProps> = ({ name, image, desc, url }: ProjectProps) => {
   return (
-    <Link href={url}>
+    <Link href={url} passHref>
       <a href={url}>
-        <div className="hover:cursor-pointer projectcard p-4 h-96  rounded-xl border border-gray-200 dark:border-gray-700 shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl justify-center mx-auto">
+        <div className="hover:cursor-pointer projectcard p-4 h-96  rounded-xl border border-gray-200 dark:border-gray-700 shadow-md transition hover:-translate-y-1 duration-100 transform hover:shadow-2xl justify-center">
           <div className="flex-col  flex justify-center items-center ">
             <div className="flex-shrink-0">
               <Image

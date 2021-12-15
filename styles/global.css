@@ -18,15 +18,7 @@ html {
   width:19em;
   height:38vh;
 }
-  .hero {
-    height: 30vh;
-  }
-  
-@media (min-width: 768px) {
-  .hero {
-    height: 60vh;
-  }
-}
+
 
 .membercard{
   max-width: 15rem;
@@ -147,18 +139,17 @@ li {
 }
 
 .hero {
-
-
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-.hero{
-  background-image:  url("/static/images/light.svg");
-}
 
+.hero{
+  background-image: url('/static/images/hero.jpg')
+}
 .dark .hero{
-  background-image: url("/static/images/mountain.svg");
+  background-color:black;
+  background-image: none;
 }

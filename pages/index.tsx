@@ -9,27 +9,25 @@ const Home: NextPage = () => {
   return (
     <>
       <SEO />
-      <div className="w-full transition-all  hero z-0 flex sm:px-0 duration-200 ">
-        <div className="inset-0 w-full absolute z-10 bg-black opacity-10 "></div>
-        <div className=" px-4 pt-6 md:pt-16 z-10" style={{ paddingLeft: '8vw' }}>
-          <div className="text-5xl md:text-9xl font-semibold text-white ">Team int</div>
+      <div className="w-full pt-48 pb-96 transition-all sm:px-0 duration-200 hero text-center">
+        
+          <div className="text-5xl md:text-9xl font-semibold text-black font-mono dark:text-white">Team int</div>
 
-          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-white">We live to code.</p>
+          <p className="text-xl md:text-3xl  md:pt-1  sm:ml-5 text-black font-mono dark:text-white">We live to code.</p>
 
           <div className="mt-3 md:mt-8 ">
             <a
               href="/#about"
-              className="bg-white text-gray-800 font-semibold text-sm md:text-lg py-2 px-2 md:py-3 md:px-4 uppercase text-semibold rounded-lg shadow sm:ml-5"
+              className="bg-white text-gray-800 font-mono font-semibold text-sm md:text-lg py-2 px-2 md:py-3 md:px-4 text-medium rounded-lg shadow sm:ml-5"
             >
-              about
+            About
             </a>
-          </div>
-        </div>
+        </div>  
       </div>
 
       <div className="transtition-colors relative duration-200 z-20  mx-auto rounded-2xl bg-white dark:bg-primary">
         <div className="p-4  mx-auto max-w-5xl   text-center pt-12">
-          <span className="   text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
+          <span className="  font-mono  text-3xl underline pt-2  md:text-6xl tracking-tight font-light uppercase">
             We live to code
           </span>
           <div id="about"></div>
@@ -58,7 +56,7 @@ const Home: NextPage = () => {
           </div>
           <div className="rounded-xl p-4 pt-20 ">
             <p className="text-5xl pb-1 font-medium">프로젝트 소개</p>
-            <div className="flex flex-wrap gap-4 pt-5">
+            <div className="flex flex-wrap gap-4 pt-5 mx-auto items-center justify-center">
               <ProjectCard
                 url="https://github.com/Team-int/intbot"
                 name="인트봇"

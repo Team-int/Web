@@ -8,10 +8,10 @@ const members: Record<string, memberProps> = {
     desc: 'Team Leader, Full stack developer',
   },
   JcdeA: {
-    name: 'JcdeA',
+    name: 'Jeeho Ahn',
     profile: '/static/images/members/io.webp',
     github: 'https://github.com/JcdeA',
-    desc: 'Full stack developer',
+    desc: 'Team leader, Full stack developer',
   },
   sujang958: {
     name: 'Sujang958',

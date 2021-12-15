@@ -2,8 +2,6 @@ import Head from 'next/head'
 const SEO: React.FC<{ title?: string }> = ({ title }) => {
   return (
     <Head>
-      <link rel="preload" as="image" href="/static/images/light.svg" />
-      <link rel="preload" as="image" href="/static/images/mountain.svg" />
 
       <link
         rel="preload stylesheet"
