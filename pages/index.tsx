@@ -72,30 +72,6 @@ const Home: NextPage = () => {
                   </p>
                 }
               />
-              <ProjectCard
-                url="https://github.com/Team-int/nammu-bot"
-                name="나무봇"
-                image="/static/images/symbol.webp"
-                desc={
-                  <p>
-                    임베드,
-                    <span className="font-medium"> 쉽고 간편하고 빠르게 </span>
-                    작성하세요.
-                  </p>
-                }
-              />
-              <ProjectCard
-                url="/core"
-                name="코어봇"
-                image="/static/images/projects/core.png"
-                desc={
-                  <p>
-                    봇 한 개만으로도 서버 초기 설정부터 서버 관리까지 전부 커버가 가능하도록 설계된{' '}
-                    <br />
-                    개발중인 디스코드 봇, 코어봇입니다.
-                  </p>
-                }
-              />
             </div>
           </div>
         </div>
