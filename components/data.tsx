@@ -25,23 +25,11 @@ const members: Record<string, memberProps> = {
     github: 'https://github.com/onion8513',
     desc: 'Backend developer',
   },
-  agg: {
-    name: 'madeGOD',
-    profile: '/static/images/members/agg.webp',
-    github: 'https://github.com/madeGOD',
-    desc: 'Bot developer',
-  },
   ttakku: {
     name: 'aki',
     profile: '/static/images/members/ttakku.jpeg',
     github: 'https://github.com/AkiaCode',
     desc: 'Full stack Developer',
-  },
-  bainble: {
-    name: 'bainble',
-    profile: '/static/images/members/bainble.webp',
-    github: 'https://github.com/Bainble0211',
-    desc: 'Bot Developer',
   },
   simsimler: {
     name: 'simSimler',
@@ -60,18 +48,6 @@ const members: Record<string, memberProps> = {
     profile: '/static/images/members/csh.png',
     github: 'https://github.com/CSH3235',
     desc: 'Forum Manager',
-  },
-  issac: {
-    name: 'issac',
-    profile: '/static/images/members/shimshim.jpeg',
-    github: 'https://github.com/issac4892',
-    desc: 'Bot Developer',
-  },
-  lineking: {
-    name: 'lineking',
-    profile: '/static/images/members/lineking.png',
-    github: 'https://github.com/LINEKING2100',
-    desc: 'Designer',
   },
   kirist: {
     name: 'kiRist',
